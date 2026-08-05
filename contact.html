@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact LockIn TV.">
+  <title>Contact | LockIn TV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header solid">
+    <a class="brand" href="index.html" aria-label="LockIn TV home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>LockIn TV</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="contact-main">
+    <section class="contact-hero">
+      <p class="eyebrow">Contact</p>
+      <h1>Contact us.</h1>
+      <p>For manufacturing, hardware, pilot, or advisor conversations, send us a message.</p>
+    </section>
+
+    <section class="contact-layout">
+      <div class="contact-card">
+        <h2>Send us a message</h2>
+        <p class="form-note">This form opens your email app with a draft addressed to LockIn TV.</p>
+        <form action="mailto:dan@lockintv.com" method="post" enctype="text/plain">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" autocomplete="organization">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button class="button primary" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Copyright 2026 LockIn TV</span>
+    <span>Patent pending</span>
+    <a href="contact.html">Contact</a>
+  </footer>
+</body>
+</html>
+
