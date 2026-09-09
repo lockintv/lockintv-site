@@ -1,0 +1,1 @@
+window.LOCKINTV_SURVEY_ENDPOINT = "";

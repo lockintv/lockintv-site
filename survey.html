@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Quick LockIn TV product survey for sports fans.">
+  <title>Survey | LockIn TV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header solid">
+    <a class="brand" href="index.html" aria-label="LockIn TV home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>LockIn TV</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="survey.html">Survey</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="survey-main">
+    <section class="survey-hero" id="surveyStart">
+      <p class="eyebrow">Quick Survey</p>
+      <h1>Help shape LockIn TV.</h1>
+      <p>We are testing an early product idea for sports fans. Imagine a small speaker, soundbar, or connected TV device that automatically changes game audio based on what is happening. When the game is active, the volume is up. During downtime, breaks, or lower-priority moments, the volume can lower.</p>
+      <button class="button primary" type="button" id="startSurveyButton">Start survey</button>
+    </section>
+
+    <section class="survey-layout hidden" id="surveyPanel" aria-label="LockIn TV product survey">
+      <form class="survey-card" id="surveyForm">
+        <div class="survey-heading">
+          <p class="eyebrow">Product Fit</p>
+          <h2>Sports watching survey</h2>
+          <p>Please answer based on what you actually do when watching sports, not what sounds ideal.</p>
+        </div>
+
+        <fieldset>
+          <legend>1. How often do you watch live sports?</legend>
+          <label><input type="radio" name="watch_frequency" value="Daily or almost daily" required>Daily or almost daily</label>
+          <label><input type="radio" name="watch_frequency" value="A few times per week">A few times per week</label>
+          <label><input type="radio" name="watch_frequency" value="About once per week">About once per week</label>
+          <label><input type="radio" name="watch_frequency" value="A few times per month">A few times per month</label>
+          <label><input type="radio" name="watch_frequency" value="Only for major games/events">Only for major games/events</label>
+          <label><input type="radio" name="watch_frequency" value="Rarely">Rarely</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. How often do you multitask while watching live sports?</legend>
+          <label><input type="radio" name="multitask_frequency" value="Almost always" required>Almost always</label>
+          <label><input type="radio" name="multitask_frequency" value="Often">Often</label>
+          <label><input type="radio" name="multitask_frequency" value="Sometimes">Sometimes</label>
+          <label><input type="radio" name="multitask_frequency" value="Rarely">Rarely</label>
+          <label><input type="radio" name="multitask_frequency" value="Never">Never</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. How often do you lower or mute the TV during commercials, halftime, or downtime?</legend>
+          <label><input type="radio" name="mute_downtime_frequency" value="Almost every game" required>Almost every game</label>
+          <label><input type="radio" name="mute_downtime_frequency" value="Often">Often</label>
+          <label><input type="radio" name="mute_downtime_frequency" value="Sometimes">Sometimes</label>
+          <label><input type="radio" name="mute_downtime_frequency" value="Rarely">Rarely</label>
+          <label><input type="radio" name="mute_downtime_frequency" value="Never">Never</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. How often do you miss a play because you were distracted or the volume was low/muted?</legend>
+          <label><input type="radio" name="miss_play_frequency" value="Almost every game" required>Almost every game</label>
+          <label><input type="radio" name="miss_play_frequency" value="Often">Often</label>
+          <label><input type="radio" name="miss_play_frequency" value="Sometimes">Sometimes</label>
+          <label><input type="radio" name="miss_play_frequency" value="Rarely">Rarely</label>
+          <label><input type="radio" name="miss_play_frequency" value="Never">Never</label>
+        </fieldset>
+
+        <div class="scale-question">
+          <label for="usefulness_score">5. How useful does this product idea sound to you?</label>
+          <div class="scale-row">
+            <span>Not useful</span>
+            <input id="usefulness_score" name="usefulness_score" type="range" min="1" max="10" value="5" required>
+            <output id="usefulnessOutput">5</output>
+            <span>Extremely useful</span>
+          </div>
+        </div>
+
+        <div class="scale-question">
+          <label for="try_likelihood_score">6. If it worked reliably, how likely would you be to try it?</label>
+          <div class="scale-row">
+            <span>Would not try</span>
+            <input id="try_likelihood_score" name="try_likelihood_score" type="range" min="1" max="10" value="5" required>
+            <output id="tryOutput">5</output>
+            <span>Definitely would try</span>
+          </div>
+        </div>
+
+        <fieldset>
+          <legend>7. Which version would you prefer?</legend>
+          <label><input type="radio" name="preferred_version" value="Small speaker/soundbar made for this product" required>Small speaker/soundbar made for this product</label>
+          <label><input type="radio" name="preferred_version" value="App that works with a compatible speaker/soundbar I already own">App that works with a compatible speaker/soundbar I already own</label>
+          <label><input type="radio" name="preferred_version" value="Small HDMI/TV stick">Small HDMI/TV stick</label>
+          <label><input type="radio" name="preferred_version" value="Phone alerts only, no TV hardware">Phone alerts only, no TV hardware</label>
+          <label><input type="radio" name="preferred_version" value="No preference, whichever works best">No preference, whichever works best</label>
+          <label><input type="radio" name="preferred_version" value="I would not use this">I would not use this</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>8. Would you prefer a simple physical remote for quick volume/mode changes?</legend>
+          <label><input type="radio" name="physical_remote_preference" value="Yes, I would prefer a physical remote" required>Yes, I would prefer a physical remote</label>
+          <label><input type="radio" name="physical_remote_preference" value="Maybe, if it made the product easier to use">Maybe, if it made the product easier to use</label>
+          <label><input type="radio" name="physical_remote_preference" value="No, I would rather use the phone app">No, I would rather use the phone app</label>
+          <label><input type="radio" name="physical_remote_preference" value="No preference">No preference</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>9. Which feature would be most valuable?</legend>
+          <label><input type="radio" name="most_valuable_feature" value="Volume automatically up when the game is live/action is happening" required>Volume automatically up when the game is live/action is happening</label>
+          <label><input type="radio" name="most_valuable_feature" value="Volume up only for likely big/scoring moments">Volume up only for likely big/scoring moments</label>
+          <label><input type="radio" name="most_valuable_feature" value="Volume down during commercials/downtime">Volume down during commercials/downtime</label>
+          <label><input type="radio" name="most_valuable_feature" value="Alert me when the game is about to resume">Alert me when the game is about to resume</label>
+          <label><input type="radio" name="most_valuable_feature" value="Help me follow multiple games">Help me follow multiple games</label>
+          <label><input type="radio" name="most_valuable_feature" value="I do not see much value">I do not see much value</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>10. What would you be willing to pay upfront for the hardware if it worked well?</legend>
+          <label><input type="radio" name="hardware_price" value="$0" required>$0</label>
+          <label><input type="radio" name="hardware_price" value="$20">$20</label>
+          <label><input type="radio" name="hardware_price" value="$40">$40</label>
+          <label><input type="radio" name="hardware_price" value="$60">$60</label>
+          <label><input type="radio" name="hardware_price" value="$80">$80</label>
+          <label><input type="radio" name="hardware_price" value="$100+">$100+</label>
+          <label><input type="radio" name="hardware_price" value="I would not buy hardware">I would not buy hardware</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>11. What monthly price would feel reasonable?</legend>
+          <label><input type="radio" name="monthly_price" value="$0" required>$0</label>
+          <label><input type="radio" name="monthly_price" value="$2.99/month">$2.99/month</label>
+          <label><input type="radio" name="monthly_price" value="$4.99/month">$4.99/month</label>
+          <label><input type="radio" name="monthly_price" value="$7.99/month">$7.99/month</label>
+          <label><input type="radio" name="monthly_price" value="$9.99/month">$9.99/month</label>
+          <label><input type="radio" name="monthly_price" value="I would not pay monthly">I would not pay monthly</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>12. If this existed for your favorite team next week, would you use it?</legend>
+          <label><input type="radio" name="use_next_week" value="Yes" required>Yes</label>
+          <label><input type="radio" name="use_next_week" value="Probably">Probably</label>
+          <label><input type="radio" name="use_next_week" value="Maybe">Maybe</label>
+          <label><input type="radio" name="use_next_week" value="Probably not">Probably not</label>
+          <label><input type="radio" name="use_next_week" value="No">No</label>
+        </fieldset>
+
+        <fieldset data-required-checkbox="biggest_concern">
+          <legend>13. What is your biggest concern or reason you might not use it? Select all that apply.</legend>
+          <label><input type="checkbox" name="biggest_concern" value="It might miss important plays">It might miss important plays</label>
+          <label><input type="checkbox" name="biggest_concern" value="It might change volume at the wrong time">It might change volume at the wrong time</label>
+          <label><input type="checkbox" name="biggest_concern" value="It might be hard to set up">It might be hard to set up</label>
+          <label><input type="checkbox" name="biggest_concern" value="It might not work with my TV/apps">It might not work with my TV/apps</label>
+          <label><input type="checkbox" name="biggest_concern" value="I do not want extra hardware">I do not want extra hardware</label>
+          <label><input type="checkbox" name="biggest_concern" value="I do not want another subscription">I do not want another subscription</label>
+          <label><input type="checkbox" name="biggest_concern" value="I do not watch enough sports">I do not watch enough sports</label>
+          <label class="inline-other"><input type="checkbox" name="biggest_concern" value="Other">Other <input type="text" id="biggestConcernOther" name="biggest_concern_other" placeholder="Optional"></label>
+          <p class="field-error hidden" id="concernError">Please choose at least one concern.</p>
+        </fieldset>
+
+        <label for="main_benefit">14. In your own words, what is the main benefit of this idea?</label>
+        <textarea id="main_benefit" name="main_benefit" rows="4"></textarea>
+
+        <label for="need_trigger">15. What would make you say, "I need this"?</label>
+        <textarea id="need_trigger" name="need_trigger" rows="4"></textarea>
+
+        <label for="open_feedback">16. Any suggestions, concerns, or feature ideas?</label>
+        <textarea id="open_feedback" name="open_feedback" rows="4"></textarea>
+
+        <p class="form-note" id="surveyStatus"></p>
+        <button class="button primary" type="submit">Submit survey</button>
+      </form>
+    </section>
+
+    <section class="survey-layout hidden" id="giveawayPanel" aria-label="Optional giveaway entry">
+      <div class="survey-card">
+        <p class="eyebrow">Thank You</p>
+        <h2>Want to be entered to win a giveaway?</h2>
+        <p class="form-note">This is optional. Your survey answers were already submitted.</p>
+        <form id="giveawayForm">
+          <label for="giveawayEmail">Email</label>
+          <input id="giveawayEmail" name="email" type="email" autocomplete="email" required>
+
+          <label for="giveawayName">Name</label>
+          <input id="giveawayName" name="name" type="text" autocomplete="name">
+
+          <p class="form-note" id="giveawayStatus"></p>
+          <button class="button primary" type="submit">Enter giveaway</button>
+        </form>
+        <button class="button secondary" type="button" id="skipGiveawayButton">No thanks</button>
+      </div>
+    </section>
+
+    <section class="survey-layout hidden" id="donePanel">
+      <div class="survey-card">
+        <p class="eyebrow">Complete</p>
+        <h2>Thanks for the feedback.</h2>
+        <p>Your input helps shape what LockIn TV becomes next.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Copyright 2026 LockIn TV</span>
+    <span>Patent pending</span>
+    <a href="survey.html">Survey</a>
+    <a href="contact.html">Contact</a>
+  </footer>
+
+  <script src="survey_config.js"></script>
+  <script>
+    const SURVEY_VERSION = 'quick-product-validation-v1-2026-09-04';
+    const pageLoadedAt = new Date();
+    let surveyStartedAt = null;
+    let currentResponseId = null;
+
+    const startPanel = document.getElementById('surveyStart');
+    const surveyPanel = document.getElementById('surveyPanel');
+    const giveawayPanel = document.getElementById('giveawayPanel');
+    const donePanel = document.getElementById('donePanel');
+    const startButton = document.getElementById('startSurveyButton');
+    const surveyForm = document.getElementById('surveyForm');
+    const giveawayForm = document.getElementById('giveawayForm');
+    const skipGiveawayButton = document.getElementById('skipGiveawayButton');
+    const surveyStatus = document.getElementById('surveyStatus');
+    const giveawayStatus = document.getElementById('giveawayStatus');
+    const concernError = document.getElementById('concernError');
+    const usefulnessInput = document.getElementById('usefulness_score');
+    const usefulnessOutput = document.getElementById('usefulnessOutput');
+    const tryInput = document.getElementById('try_likelihood_score');
+    const tryOutput = document.getElementById('tryOutput');
+
+    startButton.addEventListener('click', () => {
+      surveyStartedAt = new Date();
+      startPanel.classList.add('hidden');
+      surveyPanel.classList.remove('hidden');
+      surveyPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    usefulnessInput.addEventListener('input', () => {
+      usefulnessOutput.value = usefulnessInput.value;
+      usefulnessOutput.textContent = usefulnessInput.value;
+    });
+
+    tryInput.addEventListener('input', () => {
+      tryOutput.value = tryInput.value;
+      tryOutput.textContent = tryInput.value;
+    });
+
+    surveyForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!validateRequiredCheckboxes()) return;
+
+      const submittedAt = new Date();
+      const responseId = crypto.randomUUID ? crypto.randomUUID() : `survey-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+      currentResponseId = responseId;
+      const payload = {
+        recordType: 'survey',
+        surveyVersion: SURVEY_VERSION,
+        responseId,
+        pageLoadedAt: pageLoadedAt.toISOString(),
+        surveyStartedAt: (surveyStartedAt || pageLoadedAt).toISOString(),
+        surveySubmittedAt: submittedAt.toISOString(),
+        durationMs: submittedAt.getTime() - (surveyStartedAt || pageLoadedAt).getTime(),
+        pageToStartMs: (surveyStartedAt || submittedAt).getTime() - pageLoadedAt.getTime(),
+        userAgent: navigator.userAgent,
+        language: navigator.language,
+        viewport: `${window.innerWidth}x${window.innerHeight}`,
+        answers: formToObject(surveyForm)
+      };
+
+      surveyStatus.textContent = 'Submitting...';
+      await submitPayload(payload);
+      surveyPanel.classList.add('hidden');
+      giveawayPanel.classList.remove('hidden');
+      giveawayPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    giveawayForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const payload = {
+        recordType: 'giveaway',
+        surveyVersion: SURVEY_VERSION,
+        responseId: currentResponseId,
+        submittedAt: new Date().toISOString(),
+        email: document.getElementById('giveawayEmail').value.trim(),
+        name: document.getElementById('giveawayName').value.trim()
+      };
+
+      giveawayStatus.textContent = 'Submitting...';
+      await submitPayload(payload);
+      giveawayPanel.classList.add('hidden');
+      donePanel.classList.remove('hidden');
+      donePanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    skipGiveawayButton.addEventListener('click', () => {
+      giveawayPanel.classList.add('hidden');
+      donePanel.classList.remove('hidden');
+      donePanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    function validateRequiredCheckboxes() {
+      const groupName = 'biggest_concern';
+      const checked = surveyForm.querySelectorAll(`input[name="${groupName}"]:checked`).length;
+      concernError.classList.toggle('hidden', checked > 0);
+      if (!checked) {
+        concernError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      return checked > 0;
+    }
+
+    function formToObject(form) {
+      const data = new FormData(form);
+      const output = {};
+      for (const [key, value] of data.entries()) {
+        if (output[key]) {
+          output[key] = Array.isArray(output[key]) ? [...output[key], value] : [output[key], value];
+        } else {
+          output[key] = value;
+        }
+      }
+      return output;
+    }
+
+    async function submitPayload(payload) {
+      const endpoint = window.LOCKINTV_SURVEY_ENDPOINT;
+      if (!endpoint) {
+        saveLocalFallback(payload);
+        return;
+      }
+
+      try {
+        await fetch(endpoint, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+      } catch (error) {
+        saveLocalFallback(payload);
+      }
+    }
+
+    function saveLocalFallback(payload) {
+      const key = 'lockintv_pending_survey_payloads';
+      const existing = JSON.parse(localStorage.getItem(key) || '[]');
+      existing.push(payload);
+      localStorage.setItem(key, JSON.stringify(existing));
+      console.info('Survey endpoint not configured; stored locally for testing.', payload);
+    }
+  </script>
+</body>
+</html>
