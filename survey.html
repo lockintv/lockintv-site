@@ -27,7 +27,7 @@
     <section class="survey-hero" id="surveyStart">
       <p class="eyebrow">Quick Survey</p>
       <h1>Help shape LockIn TV.</h1>
-      <p>We are testing an early product idea for sports fans. Imagine a small speaker, soundbar, or connected TV device that automatically changes game audio based on what is happening. When the game is active, the volume is up. During downtime, breaks, or lower-priority moments, the volume can lower.</p>
+      <p>We are testing an early product idea for sports fans. The survey starts with a few quick questions about how you watch live sports, then asks for your reaction to the concept.</p>
       <button class="button primary" type="button" id="startSurveyButton">Start survey</button>
     </section>
 
@@ -76,8 +76,14 @@
           <label><input type="radio" name="miss_play_frequency" value="Never">Never</label>
         </fieldset>
 
+        <section class="concept-card" aria-label="Product concept">
+          <p class="eyebrow">The Idea</p>
+          <h3>What if your sports audio followed the game?</h3>
+          <p>LockIn TV would be a small smart speaker or soundbar for live sports. It would keep the volume up during game action, lower it during downtime, and let you set the levels from your phone or a simple remote. The goal is to keep the game on without constantly muting, unmuting, or missing big plays when you look away.</p>
+        </section>
+
         <div class="scale-question">
-          <label for="usefulness_score">5. How useful does this product idea sound to you?</label>
+          <label for="usefulness_score">5. How useful does this sound for the way you actually watch sports?</label>
           <div class="scale-row">
             <span>Not useful</span>
             <input id="usefulness_score" name="usefulness_score" type="range" min="1" max="10" value="5" required>
@@ -87,7 +93,7 @@
         </div>
 
         <div class="scale-question">
-          <label for="try_likelihood_score">6. If it worked reliably, how likely would you be to try it?</label>
+          <label for="try_likelihood_score">6. If it worked reliably and was easy to set up, how likely would you be to try it?</label>
           <div class="scale-row">
             <span>Would not try</span>
             <input id="try_likelihood_score" name="try_likelihood_score" type="range" min="1" max="10" value="5" required>
@@ -97,17 +103,7 @@
         </div>
 
         <fieldset>
-          <legend>7. Which version would you prefer?</legend>
-          <label><input type="radio" name="preferred_version" value="Small speaker/soundbar made for this product" required>Small speaker/soundbar made for this product</label>
-          <label><input type="radio" name="preferred_version" value="App that works with a compatible speaker/soundbar I already own">App that works with a compatible speaker/soundbar I already own</label>
-          <label><input type="radio" name="preferred_version" value="Small HDMI/TV stick">Small HDMI/TV stick</label>
-          <label><input type="radio" name="preferred_version" value="Phone alerts only, no TV hardware">Phone alerts only, no TV hardware</label>
-          <label><input type="radio" name="preferred_version" value="No preference, whichever works best">No preference, whichever works best</label>
-          <label><input type="radio" name="preferred_version" value="I would not use this">I would not use this</label>
-        </fieldset>
-
-        <fieldset>
-          <legend>8. Would you prefer a simple physical remote for quick volume/mode changes?</legend>
+          <legend>7. Would you prefer a simple physical remote for quick volume/mode changes?</legend>
           <label><input type="radio" name="physical_remote_preference" value="Yes, I would prefer a physical remote" required>Yes, I would prefer a physical remote</label>
           <label><input type="radio" name="physical_remote_preference" value="Maybe, if it made the product easier to use">Maybe, if it made the product easier to use</label>
           <label><input type="radio" name="physical_remote_preference" value="No, I would rather use the phone app">No, I would rather use the phone app</label>
@@ -115,7 +111,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>9. Which feature would be most valuable?</legend>
+          <legend>8. Which feature would be most valuable?</legend>
           <label><input type="radio" name="most_valuable_feature" value="Volume automatically up when the game is live/action is happening" required>Volume automatically up when the game is live/action is happening</label>
           <label><input type="radio" name="most_valuable_feature" value="Volume up only for likely big/scoring moments">Volume up only for likely big/scoring moments</label>
           <label><input type="radio" name="most_valuable_feature" value="Volume down during commercials/downtime">Volume down during commercials/downtime</label>
@@ -125,18 +121,20 @@
         </fieldset>
 
         <fieldset>
-          <legend>10. What would you be willing to pay upfront for the hardware if it worked well?</legend>
-          <label><input type="radio" name="hardware_price" value="$0" required>$0</label>
-          <label><input type="radio" name="hardware_price" value="$20">$20</label>
-          <label><input type="radio" name="hardware_price" value="$40">$40</label>
-          <label><input type="radio" name="hardware_price" value="$60">$60</label>
-          <label><input type="radio" name="hardware_price" value="$80">$80</label>
-          <label><input type="radio" name="hardware_price" value="$100+">$100+</label>
+          <legend>9. What would you be willing to pay upfront for the hardware if it worked well?</legend>
+          <label><input type="radio" name="hardware_price" value="$20 or less" required>$20 or less</label>
+          <label><input type="radio" name="hardware_price" value="$21-$40">$21-$40</label>
+          <label><input type="radio" name="hardware_price" value="$41-$60">$41-$60</label>
+          <label><input type="radio" name="hardware_price" value="$61-$80">$61-$80</label>
+          <label><input type="radio" name="hardware_price" value="$81-$100">$81-$100</label>
+          <label><input type="radio" name="hardware_price" value="$101-$120">$101-$120</label>
+          <label><input type="radio" name="hardware_price" value="$121-$150">$121-$150</label>
+          <label><input type="radio" name="hardware_price" value="$150+">$150+</label>
           <label><input type="radio" name="hardware_price" value="I would not buy hardware">I would not buy hardware</label>
         </fieldset>
 
         <fieldset>
-          <legend>11. What monthly price would feel reasonable?</legend>
+          <legend>10. What monthly price would feel reasonable?</legend>
           <label><input type="radio" name="monthly_price" value="$0" required>$0</label>
           <label><input type="radio" name="monthly_price" value="$2.99/month">$2.99/month</label>
           <label><input type="radio" name="monthly_price" value="$4.99/month">$4.99/month</label>
@@ -145,17 +143,8 @@
           <label><input type="radio" name="monthly_price" value="I would not pay monthly">I would not pay monthly</label>
         </fieldset>
 
-        <fieldset>
-          <legend>12. If this existed for your favorite team next week, would you use it?</legend>
-          <label><input type="radio" name="use_next_week" value="Yes" required>Yes</label>
-          <label><input type="radio" name="use_next_week" value="Probably">Probably</label>
-          <label><input type="radio" name="use_next_week" value="Maybe">Maybe</label>
-          <label><input type="radio" name="use_next_week" value="Probably not">Probably not</label>
-          <label><input type="radio" name="use_next_week" value="No">No</label>
-        </fieldset>
-
         <fieldset data-required-checkbox="biggest_concern">
-          <legend>13. What is your biggest concern or reason you might not use it? Select all that apply.</legend>
+          <legend>11. What is your biggest concern or reason you might not use it? Select all that apply.</legend>
           <label><input type="checkbox" name="biggest_concern" value="It might miss important plays">It might miss important plays</label>
           <label><input type="checkbox" name="biggest_concern" value="It might change volume at the wrong time">It might change volume at the wrong time</label>
           <label><input type="checkbox" name="biggest_concern" value="It might be hard to set up">It might be hard to set up</label>
@@ -167,13 +156,10 @@
           <p class="field-error hidden" id="concernError">Please choose at least one concern.</p>
         </fieldset>
 
-        <label for="main_benefit">14. In your own words, what is the main benefit of this idea?</label>
-        <textarea id="main_benefit" name="main_benefit" rows="4"></textarea>
+        <label for="idea_good_bad">12. In your own words, what is the best part of this idea, and what would make you hesitate?</label>
+        <textarea id="idea_good_bad" name="idea_good_bad" rows="4"></textarea>
 
-        <label for="need_trigger">15. What would make you say, "I need this"?</label>
-        <textarea id="need_trigger" name="need_trigger" rows="4"></textarea>
-
-        <label for="open_feedback">16. Any suggestions, concerns, or feature ideas?</label>
+        <label for="open_feedback">13. Any suggestions, concerns, or feature ideas?</label>
         <textarea id="open_feedback" name="open_feedback" rows="4"></textarea>
 
         <p class="form-note" id="surveyStatus"></p>
@@ -218,7 +204,7 @@
 
   <script src="survey_config.js"></script>
   <script>
-    const SURVEY_VERSION = 'quick-product-validation-v1-2026-09-04';
+    const SURVEY_VERSION = 'quick-product-validation-v2-2026-09-09';
     const pageLoadedAt = new Date();
     let surveyStartedAt = null;
     let currentResponseId = null;

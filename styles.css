@@ -401,6 +401,26 @@ dd {
   color: var(--muted);
 }
 
+.concept-card {
+  display: grid;
+  gap: 8px;
+  margin: 8px 0;
+  padding: 20px;
+  border: 1px solid rgba(126, 177, 255, 0.28);
+  border-left: 4px solid var(--blue);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(29, 115, 255, 0.16), rgba(7, 12, 18, 0.96));
+}
+
+.concept-card h3 {
+  margin-bottom: 0;
+  font-size: clamp(20px, 3vw, 30px);
+}
+
+.concept-card p:last-child {
+  margin-bottom: 0;
+}
+
 fieldset {
   display: grid;
   gap: 10px;
