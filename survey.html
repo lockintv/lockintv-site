@@ -69,6 +69,14 @@
           </div>
         </div>
 
+        <fieldset class="hidden" id="nonTvDeviceFieldset">
+          <legend>3a. When you watch live sports away from the TV, what device do you use most?</legend>
+          <label><input type="radio" name="non_tv_device_mix" value="Mostly phone">Mostly phone</label>
+          <label><input type="radio" name="non_tv_device_mix" value="Mostly laptop/computer/tablet">Mostly laptop/computer/tablet</label>
+          <label><input type="radio" name="non_tv_device_mix" value="About even between phone and laptop/tablet">About even between phone and laptop/tablet</label>
+          <label><input type="radio" name="non_tv_device_mix" value="Not sure">Not sure</label>
+        </fieldset>
+
         <fieldset>
           <legend>4. When you watch a full game, about how much of it do you actively watch?</legend>
           <label><input type="radio" name="active_watch_percentage" value="Less than 25%" required>Less than 25%</label>
@@ -123,7 +131,8 @@
         <section class="concept-card" aria-label="Product concept">
           <p class="eyebrow">The Idea</p>
           <h3>What if your sports audio followed the game?</h3>
-          <p>LockIn TV would be a small smart speaker or soundbar for live sports. It would keep the volume up during game action and let you smoothly lower or mute commercials, halftime, and other downtime without constantly muting and unmuting your TV. You would control everything from your phone: set your preferred levels once, then multitask when needed and lock in for the important moments. The goal is simple: keep the game on without missing the moments that matter.</p>
+          <p>LockIn TV would be a small smart speaker or soundbar for live sports. It would keep the volume up during game action and let you smoothly lower or mute commercials, halftime, and other downtime without constantly muting and unmuting your TV.</p>
+          <p>You would set your preferred levels from your phone once, then multitask when needed and lock in for the important moments.</p>
         </section>
 
         <div class="scale-question">
@@ -136,35 +145,32 @@
           </div>
         </div>
 
-        <div class="scale-question">
-          <label for="try_likelihood_score">10. If it worked reliably and was easy to set up, how likely would you be to try it?</label>
-          <div class="scale-row">
-            <span>Would not try</span>
-            <input id="try_likelihood_score" name="try_likelihood_score" type="range" min="1" max="10" value="5" required>
-            <output id="tryOutput">5</output>
-            <span>Definitely would try</span>
-          </div>
-        </div>
+        <fieldset>
+          <legend>10. Which volume mode would be more helpful to you?</legend>
+          <p class="field-help">For example, in basketball this could mean whether the volume is up even when the ball is in the backcourt. In hockey, it could mean whether the volume is up during a line change or when the puck is behind the net.</p>
+          <label><input type="radio" name="preferred_volume_mode" value="Volume up any time the ball, puck, or play is live" required>Volume up any time the ball, puck, or play is live</label>
+          <label><input type="radio" name="preferred_volume_mode" value="Volume up only for legitimate scoring chances or important moments">Volume up only for legitimate scoring chances or important moments</label>
+          <label><input type="radio" name="preferred_volume_mode" value="Different modes depending on the sport">Different modes depending on the sport</label>
+          <label><input type="radio" name="preferred_volume_mode" value="Not sure">Not sure</label>
+        </fieldset>
 
         <fieldset>
-          <legend>11. Which feature would be most valuable?</legend>
-          <label><input type="radio" name="most_valuable_feature" value="Volume automatically up when the game is live/action is happening" required>Volume automatically up when the game is live/action is happening</label>
-          <label><input type="radio" name="most_valuable_feature" value="Volume up only for likely big/scoring moments">Volume up only for likely big/scoring moments</label>
-          <label><input type="radio" name="most_valuable_feature" value="Volume down during commercials/downtime">Volume down during commercials/downtime</label>
-          <label><input type="radio" name="most_valuable_feature" value="Notify me when the game is back after halftime, commercials, or extended breaks">Notify me when the game is back after halftime, commercials, or extended breaks</label>
-          <label><input type="radio" name="most_valuable_feature" value="Help me follow multiple games">Help me follow multiple games</label>
+          <legend>11. Which feature would be most helpful?</legend>
+          <label><input type="radio" name="most_valuable_feature" value="Volume goes up for live plays so I do not miss them while multitasking" required>Volume goes up for live plays so I do not miss them while multitasking</label>
+          <label><input type="radio" name="most_valuable_feature" value="Volume goes down during downtime so I can multitask">Volume goes down during downtime so I can multitask</label>
+          <label><input type="radio" name="most_valuable_feature" value="Volume goes off or very low for commercials">Volume goes off or very low for commercials</label>
+          <label><input type="radio" name="most_valuable_feature" value="Receiving a notification when the game is back after halftime or an extended break">Receiving a notification when the game is back after halftime or an extended break</label>
+          <label class="inline-other"><input type="radio" name="most_valuable_feature" value="Other">Other <input type="text" id="featureOther" name="most_valuable_feature_other" placeholder="Optional feature idea"></label>
           <label><input type="radio" name="most_valuable_feature" value="I do not see much value">I do not see much value</label>
         </fieldset>
 
         <fieldset>
           <legend>12. What would you be willing to pay upfront for the hardware if it worked well?</legend>
-          <label><input type="radio" name="hardware_price" value="$20 or less" required>$20 or less</label>
-          <label><input type="radio" name="hardware_price" value="$21-$40">$21-$40</label>
+          <label><input type="radio" name="hardware_price" value="$40 or less" required>$40 or less</label>
           <label><input type="radio" name="hardware_price" value="$41-$60">$41-$60</label>
           <label><input type="radio" name="hardware_price" value="$61-$80">$61-$80</label>
           <label><input type="radio" name="hardware_price" value="$81-$100">$81-$100</label>
-          <label><input type="radio" name="hardware_price" value="$101-$120">$101-$120</label>
-          <label><input type="radio" name="hardware_price" value="$121-$150">$121-$150</label>
+          <label><input type="radio" name="hardware_price" value="$101-$150">$101-$150</label>
           <label><input type="radio" name="hardware_price" value="$150+">$150+</label>
           <label><input type="radio" name="hardware_price" value="I would not buy hardware">I would not buy hardware</label>
         </fieldset>
@@ -192,10 +198,7 @@
           <p class="field-error hidden" id="concernError">Please choose at least one concern.</p>
         </fieldset>
 
-        <label for="idea_good_bad">15. In your own words, what is the best part of this idea, and what would make you hesitate?</label>
-        <textarea id="idea_good_bad" name="idea_good_bad" rows="4"></textarea>
-
-        <label for="open_feedback">16. Anything else you would change, add, or want us to know?</label>
+        <label for="open_feedback">15. Any other thoughts or suggestions?</label>
         <textarea id="open_feedback" name="open_feedback" rows="4"></textarea>
 
         <p class="form-note" id="surveyStatus"></p>
@@ -240,7 +243,7 @@
 
   <script src="survey_config.js"></script>
   <script>
-    const SURVEY_VERSION = 'quick-product-validation-v6-2026-10-01';
+    const SURVEY_VERSION = 'quick-product-validation-v7-2026-10-01';
     const pageLoadedAt = new Date();
     let surveyStartedAt = null;
     let currentResponseId = null;
@@ -253,6 +256,7 @@
     const surveyForm = document.getElementById('surveyForm');
     const giveawayForm = document.getElementById('giveawayForm');
     const skipGiveawayButton = document.getElementById('skipGiveawayButton');
+    const nonTvDeviceFieldset = document.getElementById('nonTvDeviceFieldset');
     const surveyStatus = document.getElementById('surveyStatus');
     const giveawayStatus = document.getElementById('giveawayStatus');
     const distractionError = document.getElementById('distractionError');
@@ -263,8 +267,6 @@
     const tvWatchOutput = document.getElementById('tvWatchOutput');
     const usefulnessInput = document.getElementById('usefulness_score');
     const usefulnessOutput = document.getElementById('usefulnessOutput');
-    const tryInput = document.getElementById('try_likelihood_score');
-    const tryOutput = document.getElementById('tryOutput');
 
     startButton.addEventListener('click', () => {
       surveyStartedAt = new Date();
@@ -281,6 +283,7 @@
     tvWatchInput.addEventListener('input', () => {
       tvWatchOutput.value = `${tvWatchInput.value}%`;
       tvWatchOutput.textContent = `${tvWatchInput.value}%`;
+      updateNonTvFollowup();
     });
 
     usefulnessInput.addEventListener('input', () => {
@@ -288,10 +291,7 @@
       usefulnessOutput.textContent = usefulnessInput.value;
     });
 
-    tryInput.addEventListener('input', () => {
-      tryOutput.value = tryInput.value;
-      tryOutput.textContent = tryInput.value;
-    });
+    updateNonTvFollowup();
 
     surveyForm.addEventListener('submit', async (event) => {
       event.preventDefault();
@@ -365,6 +365,17 @@
         firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
       return !firstError;
+    }
+
+    function updateNonTvFollowup() {
+      const showFollowup = Number(tvWatchInput.value) < 100;
+      nonTvDeviceFieldset.classList.toggle('hidden', !showFollowup);
+      const options = nonTvDeviceFieldset.querySelectorAll('input[name="non_tv_device_mix"]');
+      for (const option of options) {
+        option.required = showFollowup;
+        option.disabled = !showFollowup;
+        if (!showFollowup) option.checked = false;
+      }
     }
 
     function formToObject(form) {
