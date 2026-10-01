@@ -49,8 +49,29 @@
           <label><input type="radio" name="watch_frequency" value="Rarely">Rarely</label>
         </fieldset>
 
+        <div class="scale-question">
+          <label for="sports_fan_score">2. How big of a sports fan do you consider yourself?</label>
+          <div class="scale-row">
+            <span>Not really a fan</span>
+            <input id="sports_fan_score" name="sports_fan_score" type="range" min="1" max="10" value="5" required>
+            <output id="fanOutput">5</output>
+            <span>Huge sports fan</span>
+          </div>
+        </div>
+
         <fieldset>
-          <legend>2. How often do you multitask while watching live sports?</legend>
+          <legend>3. When you watch a full game, about how much of it do you actively watch?</legend>
+          <label><input type="radio" name="active_watch_percentage" value="Less than 25%" required>Less than 25%</label>
+          <label><input type="radio" name="active_watch_percentage" value="25%-49%">25%-49%</label>
+          <label><input type="radio" name="active_watch_percentage" value="50%-59%">50%-59%</label>
+          <label><input type="radio" name="active_watch_percentage" value="60%-69%">60%-69%</label>
+          <label><input type="radio" name="active_watch_percentage" value="70%-79%">70%-79%</label>
+          <label><input type="radio" name="active_watch_percentage" value="80%-89%">80%-89%</label>
+          <label><input type="radio" name="active_watch_percentage" value="90%-100%">90%-100%</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. How often do you multitask while watching live sports?</legend>
           <label><input type="radio" name="multitask_frequency" value="Almost always" required>Almost always</label>
           <label><input type="radio" name="multitask_frequency" value="Often">Often</label>
           <label><input type="radio" name="multitask_frequency" value="Sometimes">Sometimes</label>
@@ -58,8 +79,21 @@
           <label><input type="radio" name="multitask_frequency" value="Never">Never</label>
         </fieldset>
 
+        <fieldset data-required-checkbox="distraction_sources">
+          <legend>5. What usually distracts you while watching live sports? Select all that apply.</legend>
+          <label><input type="checkbox" name="distraction_sources" value="Phone/social media/texting">Phone/social media/texting</label>
+          <label><input type="checkbox" name="distraction_sources" value="Laptop/work">Laptop/work</label>
+          <label><input type="checkbox" name="distraction_sources" value="Talking to others">Talking to others</label>
+          <label><input type="checkbox" name="distraction_sources" value="Music">Music</label>
+          <label><input type="checkbox" name="distraction_sources" value="Studying/reading">Studying/reading</label>
+          <label><input type="checkbox" name="distraction_sources" value="Cooking/eating">Cooking/eating</label>
+          <label><input type="checkbox" name="distraction_sources" value="Nothing, I usually watch closely">Nothing, I usually watch closely</label>
+          <label class="inline-other"><input type="checkbox" name="distraction_sources" value="Other">Other <input type="text" id="distractionOther" name="distraction_sources_other" placeholder="Optional"></label>
+          <p class="field-error hidden" id="distractionError">Please choose at least one answer.</p>
+        </fieldset>
+
         <fieldset>
-          <legend>3. How often do you lower or mute the TV during commercials, halftime, or downtime?</legend>
+          <legend>6. How often do you lower or mute the TV during commercials, halftime, or downtime?</legend>
           <label><input type="radio" name="mute_downtime_frequency" value="Almost every game" required>Almost every game</label>
           <label><input type="radio" name="mute_downtime_frequency" value="Often">Often</label>
           <label><input type="radio" name="mute_downtime_frequency" value="Sometimes">Sometimes</label>
@@ -68,7 +102,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>4. How often do you miss a play because you were distracted or the volume was low/muted?</legend>
+          <legend>7. How often do you miss a play because you were distracted or the volume was low/muted?</legend>
           <label><input type="radio" name="miss_play_frequency" value="Almost every game" required>Almost every game</label>
           <label><input type="radio" name="miss_play_frequency" value="Often">Often</label>
           <label><input type="radio" name="miss_play_frequency" value="Sometimes">Sometimes</label>
@@ -79,11 +113,11 @@
         <section class="concept-card" aria-label="Product concept">
           <p class="eyebrow">The Idea</p>
           <h3>What if your sports audio followed the game?</h3>
-          <p>LockIn TV would be a small smart speaker or soundbar for live sports. It would keep the volume up during game action, lower it during downtime, and let you set the levels from your phone or a simple remote. The goal is to keep the game on without constantly muting, unmuting, or missing big plays when you look away.</p>
+          <p>LockIn TV would be a small smart speaker or soundbar for live sports. It would keep the volume up during game action, lower it during downtime, and let you set the levels from your phone. The goal is to keep the game on without constantly muting, unmuting, or missing big plays when you look away.</p>
         </section>
 
         <div class="scale-question">
-          <label for="usefulness_score">5. How useful does this sound for the way you actually watch sports?</label>
+          <label for="usefulness_score">8. How useful does this sound for the way you actually watch sports?</label>
           <div class="scale-row">
             <span>Not useful</span>
             <input id="usefulness_score" name="usefulness_score" type="range" min="1" max="10" value="5" required>
@@ -93,7 +127,7 @@
         </div>
 
         <div class="scale-question">
-          <label for="try_likelihood_score">6. If it worked reliably and was easy to set up, how likely would you be to try it?</label>
+          <label for="try_likelihood_score">9. If it worked reliably and was easy to set up, how likely would you be to try it?</label>
           <div class="scale-row">
             <span>Would not try</span>
             <input id="try_likelihood_score" name="try_likelihood_score" type="range" min="1" max="10" value="5" required>
@@ -103,15 +137,7 @@
         </div>
 
         <fieldset>
-          <legend>7. Would you prefer a simple physical remote for quick volume/mode changes?</legend>
-          <label><input type="radio" name="physical_remote_preference" value="Yes, I would prefer a physical remote" required>Yes, I would prefer a physical remote</label>
-          <label><input type="radio" name="physical_remote_preference" value="Maybe, if it made the product easier to use">Maybe, if it made the product easier to use</label>
-          <label><input type="radio" name="physical_remote_preference" value="No, I would rather use the phone app">No, I would rather use the phone app</label>
-          <label><input type="radio" name="physical_remote_preference" value="No preference">No preference</label>
-        </fieldset>
-
-        <fieldset>
-          <legend>8. Which feature would be most valuable?</legend>
+          <legend>10. Which feature would be most valuable?</legend>
           <label><input type="radio" name="most_valuable_feature" value="Volume automatically up when the game is live/action is happening" required>Volume automatically up when the game is live/action is happening</label>
           <label><input type="radio" name="most_valuable_feature" value="Volume up only for likely big/scoring moments">Volume up only for likely big/scoring moments</label>
           <label><input type="radio" name="most_valuable_feature" value="Volume down during commercials/downtime">Volume down during commercials/downtime</label>
@@ -121,7 +147,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>9. What would you be willing to pay upfront for the hardware if it worked well?</legend>
+          <legend>11. What would you be willing to pay upfront for the hardware if it worked well?</legend>
           <label><input type="radio" name="hardware_price" value="$20 or less" required>$20 or less</label>
           <label><input type="radio" name="hardware_price" value="$21-$40">$21-$40</label>
           <label><input type="radio" name="hardware_price" value="$41-$60">$41-$60</label>
@@ -134,7 +160,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>10. What monthly price would feel reasonable?</legend>
+          <legend>12. What monthly price would feel reasonable?</legend>
           <label><input type="radio" name="monthly_price" value="$0" required>$0</label>
           <label><input type="radio" name="monthly_price" value="$2.99/month">$2.99/month</label>
           <label><input type="radio" name="monthly_price" value="$4.99/month">$4.99/month</label>
@@ -144,7 +170,7 @@
         </fieldset>
 
         <fieldset data-required-checkbox="biggest_concern">
-          <legend>11. What is your biggest concern or reason you might not use it? Select all that apply.</legend>
+          <legend>13. What is your biggest concern or reason you might not use it? Select all that apply.</legend>
           <label><input type="checkbox" name="biggest_concern" value="It might miss important plays">It might miss important plays</label>
           <label><input type="checkbox" name="biggest_concern" value="It might change volume at the wrong time">It might change volume at the wrong time</label>
           <label><input type="checkbox" name="biggest_concern" value="It might be hard to set up">It might be hard to set up</label>
@@ -156,10 +182,10 @@
           <p class="field-error hidden" id="concernError">Please choose at least one concern.</p>
         </fieldset>
 
-        <label for="idea_good_bad">12. In your own words, what is the best part of this idea, and what would make you hesitate?</label>
+        <label for="idea_good_bad">14. In your own words, what is the best part of this idea, and what would make you hesitate?</label>
         <textarea id="idea_good_bad" name="idea_good_bad" rows="4"></textarea>
 
-        <label for="open_feedback">13. Any suggestions, concerns, or feature ideas?</label>
+        <label for="open_feedback">15. Anything else you would change, add, or want us to know?</label>
         <textarea id="open_feedback" name="open_feedback" rows="4"></textarea>
 
         <p class="form-note" id="surveyStatus"></p>
@@ -204,7 +230,7 @@
 
   <script src="survey_config.js"></script>
   <script>
-    const SURVEY_VERSION = 'quick-product-validation-v2-2026-09-09';
+    const SURVEY_VERSION = 'quick-product-validation-v3-2026-09-30';
     const pageLoadedAt = new Date();
     let surveyStartedAt = null;
     let currentResponseId = null;
@@ -219,7 +245,10 @@
     const skipGiveawayButton = document.getElementById('skipGiveawayButton');
     const surveyStatus = document.getElementById('surveyStatus');
     const giveawayStatus = document.getElementById('giveawayStatus');
+    const distractionError = document.getElementById('distractionError');
     const concernError = document.getElementById('concernError');
+    const fanInput = document.getElementById('sports_fan_score');
+    const fanOutput = document.getElementById('fanOutput');
     const usefulnessInput = document.getElementById('usefulness_score');
     const usefulnessOutput = document.getElementById('usefulnessOutput');
     const tryInput = document.getElementById('try_likelihood_score');
@@ -230,6 +259,11 @@
       startPanel.classList.add('hidden');
       surveyPanel.classList.remove('hidden');
       surveyPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    fanInput.addEventListener('input', () => {
+      fanOutput.value = fanInput.value;
+      fanOutput.textContent = fanInput.value;
     });
 
     usefulnessInput.addEventListener('input', () => {
@@ -296,13 +330,24 @@
     });
 
     function validateRequiredCheckboxes() {
-      const groupName = 'biggest_concern';
-      const checked = surveyForm.querySelectorAll(`input[name="${groupName}"]:checked`).length;
-      concernError.classList.toggle('hidden', checked > 0);
-      if (!checked) {
-        concernError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const groups = [
+        { name: 'distraction_sources', error: distractionError },
+        { name: 'biggest_concern', error: concernError }
+      ];
+      let firstError = null;
+
+      for (const group of groups) {
+        const checked = surveyForm.querySelectorAll(`input[name="${group.name}"]:checked`).length;
+        group.error.classList.toggle('hidden', checked > 0);
+        if (!checked && !firstError) {
+          firstError = group.error;
+        }
       }
-      return checked > 0;
+
+      if (firstError) {
+        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      return !firstError;
     }
 
     function formToObject(form) {
