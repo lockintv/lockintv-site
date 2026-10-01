@@ -462,23 +462,6 @@ fieldset input[type="checkbox"] {
   font-weight: 600;
 }
 
-.device-share-grid {
-  display: grid;
-  grid-template-columns: minmax(130px, 0.8fr) minmax(150px, 1fr);
-  gap: 10px 14px;
-  align-items: center;
-}
-
-.device-share-grid label {
-  color: rgba(247, 251, 255, 0.86);
-  font-size: 14px;
-  text-transform: none;
-}
-
-.device-share-grid select {
-  min-height: 44px;
-}
-
 .inline-other input[type="text"] {
   min-width: 180px;
   padding: 9px 10px;

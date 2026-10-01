@@ -59,41 +59,15 @@
           </div>
         </div>
 
-        <fieldset>
-          <legend>3. Roughly what share of your live sports watching happens on each device?</legend>
-          <p class="field-help">Estimates are fine. The totals do not need to add up perfectly.</p>
-          <div class="device-share-grid">
-            <label for="tv_watch_share">TV</label>
-            <select id="tv_watch_share" name="tv_watch_share" required>
-              <option value="">Select one</option>
-              <option value="0%">0%</option>
-              <option value="1%-24%">1%-24%</option>
-              <option value="25%-49%">25%-49%</option>
-              <option value="50%-74%">50%-74%</option>
-              <option value="75%-100%">75%-100%</option>
-            </select>
-
-            <label for="phone_watch_share">Phone</label>
-            <select id="phone_watch_share" name="phone_watch_share" required>
-              <option value="">Select one</option>
-              <option value="0%">0%</option>
-              <option value="1%-24%">1%-24%</option>
-              <option value="25%-49%">25%-49%</option>
-              <option value="50%-74%">50%-74%</option>
-              <option value="75%-100%">75%-100%</option>
-            </select>
-
-            <label for="computer_watch_share">Laptop/computer/tablet</label>
-            <select id="computer_watch_share" name="computer_watch_share" required>
-              <option value="">Select one</option>
-              <option value="0%">0%</option>
-              <option value="1%-24%">1%-24%</option>
-              <option value="25%-49%">25%-49%</option>
-              <option value="50%-74%">50%-74%</option>
-              <option value="75%-100%">75%-100%</option>
-            </select>
+        <div class="scale-question">
+          <label for="tv_watch_percentage">3. About what percentage of your live sports watching happens on a TV instead of a phone, laptop, or tablet?</label>
+          <div class="scale-row">
+            <span>Mostly phone/laptop/tablet</span>
+            <input id="tv_watch_percentage" name="tv_watch_percentage" type="range" min="0" max="100" step="10" value="50" required>
+            <output id="tvWatchOutput">50%</output>
+            <span>Mostly TV</span>
           </div>
-        </fieldset>
+        </div>
 
         <fieldset>
           <legend>4. When you watch a full game, about how much of it do you actively watch?</legend>
@@ -266,7 +240,7 @@
 
   <script src="survey_config.js"></script>
   <script>
-    const SURVEY_VERSION = 'quick-product-validation-v5-2026-10-01';
+    const SURVEY_VERSION = 'quick-product-validation-v6-2026-10-01';
     const pageLoadedAt = new Date();
     let surveyStartedAt = null;
     let currentResponseId = null;
@@ -285,6 +259,8 @@
     const concernError = document.getElementById('concernError');
     const fanInput = document.getElementById('sports_fan_score');
     const fanOutput = document.getElementById('fanOutput');
+    const tvWatchInput = document.getElementById('tv_watch_percentage');
+    const tvWatchOutput = document.getElementById('tvWatchOutput');
     const usefulnessInput = document.getElementById('usefulness_score');
     const usefulnessOutput = document.getElementById('usefulnessOutput');
     const tryInput = document.getElementById('try_likelihood_score');
@@ -300,6 +276,11 @@
     fanInput.addEventListener('input', () => {
       fanOutput.value = fanInput.value;
       fanOutput.textContent = fanInput.value;
+    });
+
+    tvWatchInput.addEventListener('input', () => {
+      tvWatchOutput.value = `${tvWatchInput.value}%`;
+      tvWatchOutput.textContent = `${tvWatchInput.value}%`;
     });
 
     usefulnessInput.addEventListener('input', () => {
