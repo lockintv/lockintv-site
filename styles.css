@@ -455,6 +455,30 @@ fieldset input[type="checkbox"] {
   accent-color: var(--blue);
 }
 
+.field-help {
+  margin: -2px 0 4px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.device-share-grid {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.8fr) minmax(150px, 1fr);
+  gap: 10px 14px;
+  align-items: center;
+}
+
+.device-share-grid label {
+  color: rgba(247, 251, 255, 0.86);
+  font-size: 14px;
+  text-transform: none;
+}
+
+.device-share-grid select {
+  min-height: 44px;
+}
+
 .inline-other input[type="text"] {
   min-width: 180px;
   padding: 9px 10px;
@@ -515,6 +539,7 @@ label {
 }
 
 input,
+select,
 textarea {
   width: 100%;
   border: 1px solid rgba(255,255,255,0.16);
@@ -530,6 +555,7 @@ textarea {
 }
 
 input:focus,
+select:focus,
 textarea:focus {
   outline: 2px solid rgba(29, 115, 255, 0.55);
   border-color: rgba(29, 115, 255, 0.9);
