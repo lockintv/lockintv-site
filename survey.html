@@ -130,10 +130,35 @@
         </fieldset>
 
         <section class="concept-card" aria-label="Product concept">
-          <p class="eyebrow">The Idea</p>
-          <h3>What if your sports audio followed the game?</h3>
-          <p>LockIn TV would be a small smart speaker or soundbar for live sports. It would keep the volume up during game action and let you smoothly lower or mute commercials, halftime, and other downtime without constantly muting and unmuting your TV.</p>
-          <p>You would set your preferred levels from your phone once, then multitask when needed and lock in for the important moments.</p>
+          <div class="concept-copy">
+            <p class="eyebrow">The Idea</p>
+            <h3>What if your sports audio followed the game?</h3>
+            <p>LockIn TV would be a smart soundbar for live sports. It raises the volume for game action and lowers it for commercials, halftime, and downtime.</p>
+            <p>Buy the soundbar once, link your phone, pick your game, set your volume levels, and watch normally. You can multitask when needed and lock in when the important moments happen.</p>
+          </div>
+          <div class="concept-visual" aria-label="Example LockIn TV volume settings">
+            <div class="mini-phone">
+              <div class="mini-phone-top">
+                <span>LockIn TV</span>
+                <strong>Game Audio</strong>
+              </div>
+              <div class="mini-slider-row">
+                <span>Action</span>
+                <div class="mini-slider"><span style="width: 92%"></span></div>
+                <strong>90</strong>
+              </div>
+              <div class="mini-slider-row">
+                <span>Downtime</span>
+                <div class="mini-slider"><span style="width: 42%"></span></div>
+                <strong>40</strong>
+              </div>
+              <div class="mini-slider-row">
+                <span>Breaks</span>
+                <div class="mini-slider"><span style="width: 8%"></span></div>
+                <strong>0</strong>
+              </div>
+            </div>
+          </div>
         </section>
 
         <div class="scale-question">
@@ -155,18 +180,34 @@
           <label><input type="radio" name="preferred_volume_mode" value="Not sure">Not sure</label>
         </fieldset>
 
+        <fieldset data-required-checkbox="sports_use_cases">
+          <legend>11. Which sports would you most likely use this for? Select all that apply.</legend>
+          <label><input type="checkbox" name="sports_use_cases" value="NFL">NFL</label>
+          <label><input type="checkbox" name="sports_use_cases" value="College football">College football</label>
+          <label><input type="checkbox" name="sports_use_cases" value="NBA">NBA</label>
+          <label><input type="checkbox" name="sports_use_cases" value="College basketball">College basketball</label>
+          <label><input type="checkbox" name="sports_use_cases" value="MLB">MLB</label>
+          <label><input type="checkbox" name="sports_use_cases" value="NHL">NHL</label>
+          <label><input type="checkbox" name="sports_use_cases" value="Soccer">Soccer</label>
+          <label><input type="checkbox" name="sports_use_cases" value="UFC/boxing">UFC/boxing</label>
+          <label><input type="checkbox" name="sports_use_cases" value="Golf">Golf</label>
+          <label><input type="checkbox" name="sports_use_cases" value="Tennis">Tennis</label>
+          <label><input type="checkbox" name="sports_use_cases" value="I would not use it for any sports">I would not use it for any sports</label>
+          <label class="inline-other"><input type="checkbox" name="sports_use_cases" value="Other">Other <input type="text" id="sportsUseCasesOther" name="sports_use_cases_other" placeholder="Optional"></label>
+          <p class="field-error hidden" id="sportsError">Please choose at least one answer.</p>
+        </fieldset>
+
         <fieldset>
-          <legend>11. Which feature would be most helpful?</legend>
-          <label><input type="radio" name="most_valuable_feature" value="Volume goes up for live plays so I do not miss them while multitasking" required>Volume goes up for live plays so I do not miss them while multitasking</label>
-          <label><input type="radio" name="most_valuable_feature" value="Volume goes down during downtime so I can multitask">Volume goes down during downtime so I can multitask</label>
-          <label><input type="radio" name="most_valuable_feature" value="Volume goes off or very low for commercials">Volume goes off or very low for commercials</label>
-          <label><input type="radio" name="most_valuable_feature" value="Receiving a notification when the game is back after halftime or an extended break">Receiving a notification when the game is back after halftime or an extended break</label>
-          <label class="inline-other"><input type="radio" name="most_valuable_feature" value="Other">Other <input type="text" id="featureOther" name="most_valuable_feature_other" placeholder="Optional feature idea"></label>
+          <legend>12. Which feature would be most helpful?</legend>
+          <label><input type="radio" name="most_valuable_feature" value="The volume going up when live play starts or the game returns" required>The volume going up when live play starts or the game returns</label>
+          <label><input type="radio" name="most_valuable_feature" value="The volume going down or off when play stops">The volume going down or off when play stops</label>
+          <label><input type="radio" name="most_valuable_feature" value="The volume going down or off during commercials and extended breaks">The volume going down or off during commercials and extended breaks</label>
+          <label><input type="radio" name="most_valuable_feature" value="A notification when the game is back after halftime or an extended break">A notification when the game is back after halftime or an extended break</label>
           <label><input type="radio" name="most_valuable_feature" value="I do not see much value">I do not see much value</label>
         </fieldset>
 
         <fieldset>
-          <legend>12. What would you be willing to pay upfront for the hardware if it worked well?</legend>
+          <legend>13. What would you be willing to pay upfront for the hardware if it worked well?</legend>
           <label><input type="radio" name="hardware_price" value="$40 or less" required>$40 or less</label>
           <label><input type="radio" name="hardware_price" value="$41-$60">$41-$60</label>
           <label><input type="radio" name="hardware_price" value="$61-$80">$61-$80</label>
@@ -177,7 +218,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>13. What monthly price would feel reasonable?</legend>
+          <legend>14. What monthly price would feel reasonable?</legend>
           <label><input type="radio" name="monthly_price" value="$0" required>$0</label>
           <label><input type="radio" name="monthly_price" value="$2.99/month">$2.99/month</label>
           <label><input type="radio" name="monthly_price" value="$4.99/month">$4.99/month</label>
@@ -187,11 +228,9 @@
         </fieldset>
 
         <fieldset data-required-checkbox="biggest_concern">
-          <legend>14. What is your biggest concern or reason you might not use it? Select all that apply.</legend>
-          <label><input type="checkbox" name="biggest_concern" value="It might miss important plays">It might miss important plays</label>
-          <label><input type="checkbox" name="biggest_concern" value="It might change volume at the wrong time">It might change volume at the wrong time</label>
-          <label><input type="checkbox" name="biggest_concern" value="It might be hard to set up">It might be hard to set up</label>
-          <label><input type="checkbox" name="biggest_concern" value="It might not work with my TV/apps">It might not work with my TV/apps</label>
+          <legend>15. What is your biggest concern or reason you might not use it? Select all that apply.</legend>
+          <label><input type="checkbox" name="biggest_concern" value="It might miss important plays or change volume at the wrong time">It might miss important plays or change volume at the wrong time</label>
+          <label><input type="checkbox" name="biggest_concern" value="It might be hard to set up or not work with my TV/apps">It might be hard to set up or not work with my TV/apps</label>
           <label><input type="checkbox" name="biggest_concern" value="I do not want extra hardware">I do not want extra hardware</label>
           <label><input type="checkbox" name="biggest_concern" value="I do not want another subscription">I do not want another subscription</label>
           <label><input type="checkbox" name="biggest_concern" value="I do not watch enough sports">I do not watch enough sports</label>
@@ -199,7 +238,7 @@
           <p class="field-error hidden" id="concernError">Please choose at least one concern.</p>
         </fieldset>
 
-        <label for="open_feedback">15. Any other thoughts or suggestions?</label>
+        <label for="open_feedback">16. Any other thoughts or suggestions?</label>
         <textarea id="open_feedback" name="open_feedback" rows="4"></textarea>
 
         <p class="form-note" id="surveyStatus"></p>
@@ -244,7 +283,7 @@
 
   <script src="survey_config.js"></script>
   <script>
-    const SURVEY_VERSION = 'quick-product-validation-v7-2026-10-01';
+    const SURVEY_VERSION = 'quick-product-validation-v8-2026-10-01';
     const pageLoadedAt = new Date();
     let surveyStartedAt = null;
     let currentResponseId = null;
@@ -261,6 +300,7 @@
     const surveyStatus = document.getElementById('surveyStatus');
     const giveawayStatus = document.getElementById('giveawayStatus');
     const distractionError = document.getElementById('distractionError');
+    const sportsError = document.getElementById('sportsError');
     const concernError = document.getElementById('concernError');
     const fanInput = document.getElementById('sports_fan_score');
     const fanOutput = document.getElementById('fanOutput');
@@ -350,6 +390,7 @@
     function validateRequiredCheckboxes() {
       const groups = [
         { name: 'distraction_sources', error: distractionError },
+        { name: 'sports_use_cases', error: sportsError },
         { name: 'biggest_concern', error: concernError }
       ];
       let firstError = null;
