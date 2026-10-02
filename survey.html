@@ -182,16 +182,12 @@
 
         <fieldset data-required-checkbox="sports_use_cases">
           <legend>11. Which sports would you most likely use this for? Select all that apply.</legend>
-          <label><input type="checkbox" name="sports_use_cases" value="NFL">NFL</label>
-          <label><input type="checkbox" name="sports_use_cases" value="College football">College football</label>
-          <label><input type="checkbox" name="sports_use_cases" value="NBA">NBA</label>
-          <label><input type="checkbox" name="sports_use_cases" value="College basketball">College basketball</label>
-          <label><input type="checkbox" name="sports_use_cases" value="MLB">MLB</label>
-          <label><input type="checkbox" name="sports_use_cases" value="NHL">NHL</label>
-          <label><input type="checkbox" name="sports_use_cases" value="Soccer/EPL">Soccer/EPL</label>
-          <label><input type="checkbox" name="sports_use_cases" value="Women's basketball">Women's basketball</label>
+          <label><input type="checkbox" name="sports_use_cases" value="Football (NFL / college football)">Football (NFL / college football)</label>
+          <label><input type="checkbox" name="sports_use_cases" value="Basketball (NBA / NCAAM / NCAAW)">Basketball (NBA / NCAAM / NCAAW)</label>
+          <label><input type="checkbox" name="sports_use_cases" value="Baseball (MLB)">Baseball (MLB)</label>
+          <label><input type="checkbox" name="sports_use_cases" value="Hockey (NHL)">Hockey (NHL)</label>
+          <label><input type="checkbox" name="sports_use_cases" value="Soccer (EPL / Champions League / MLS)">Soccer (EPL / Champions League / MLS)</label>
           <label><input type="checkbox" name="sports_use_cases" value="UFC/boxing">UFC/boxing</label>
-          <label><input type="checkbox" name="sports_use_cases" value="Golf">Golf</label>
           <label><input type="checkbox" name="sports_use_cases" value="Tennis">Tennis</label>
           <label><input type="checkbox" name="sports_use_cases" value="I would not use it for any sports">I would not use it for any sports</label>
           <label class="inline-other"><input type="checkbox" name="sports_use_cases" value="Other">Other <input type="text" id="sportsUseCasesOther" name="sports_use_cases_other" placeholder="Optional"></label>
@@ -205,8 +201,18 @@
           <label><input type="radio" name="most_valuable_feature" value="I do not see much value">I do not see much value</label>
         </fieldset>
 
+        <div class="scale-question">
+          <label for="return_notification_score">13. How helpful would it be to get a phone notification when the game is back after halftime or an extended break?</label>
+          <div class="scale-row">
+            <span>Not helpful</span>
+            <input id="return_notification_score" name="return_notification_score" type="range" min="1" max="10" value="5" required>
+            <output id="notificationOutput">5</output>
+            <span>Extremely helpful</span>
+          </div>
+        </div>
+
         <fieldset>
-          <legend>13. What would you be willing to pay upfront for the hardware if it worked well?</legend>
+          <legend>14. What would you be willing to pay upfront for the hardware if it worked well?</legend>
           <label><input type="radio" name="hardware_price" value="$40 or less" required>$40 or less</label>
           <label><input type="radio" name="hardware_price" value="$41-$60">$41-$60</label>
           <label><input type="radio" name="hardware_price" value="$61-$80">$61-$80</label>
@@ -217,7 +223,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>14. What monthly price would feel reasonable?</legend>
+          <legend>15. What monthly price would feel reasonable?</legend>
           <label><input type="radio" name="monthly_price" value="$0" required>$0</label>
           <label><input type="radio" name="monthly_price" value="$2.99/month">$2.99/month</label>
           <label><input type="radio" name="monthly_price" value="$4.99/month">$4.99/month</label>
@@ -227,7 +233,7 @@
         </fieldset>
 
         <fieldset data-required-checkbox="biggest_concern">
-          <legend>15. What is your biggest concern or reason you might not use it? Select all that apply.</legend>
+          <legend>16. What is your biggest concern or reason you might not use it? Select all that apply.</legend>
           <label><input type="checkbox" name="biggest_concern" value="It might miss important plays or change volume at the wrong time">It might miss important plays or change volume at the wrong time</label>
           <label><input type="checkbox" name="biggest_concern" value="It might be hard to set up or not work with my TV/apps">It might be hard to set up or not work with my TV/apps</label>
           <label><input type="checkbox" name="biggest_concern" value="I do not want extra hardware">I do not want extra hardware</label>
@@ -237,7 +243,7 @@
           <p class="field-error hidden" id="concernError">Please choose at least one concern.</p>
         </fieldset>
 
-        <label for="open_feedback">16. Any other thoughts or suggestions?</label>
+        <label for="open_feedback">17. Any other thoughts or suggestions?</label>
         <textarea id="open_feedback" name="open_feedback" rows="4"></textarea>
 
         <p class="form-note" id="surveyStatus"></p>
@@ -282,7 +288,7 @@
 
   <script src="survey_config.js"></script>
   <script>
-    const SURVEY_VERSION = 'quick-product-validation-v8-2026-10-01';
+    const SURVEY_VERSION = 'quick-product-validation-v9-2026-10-01';
     const pageLoadedAt = new Date();
     let surveyStartedAt = null;
     let currentResponseId = null;
@@ -307,6 +313,8 @@
     const tvWatchOutput = document.getElementById('tvWatchOutput');
     const usefulnessInput = document.getElementById('usefulness_score');
     const usefulnessOutput = document.getElementById('usefulnessOutput');
+    const notificationInput = document.getElementById('return_notification_score');
+    const notificationOutput = document.getElementById('notificationOutput');
 
     startButton.addEventListener('click', () => {
       surveyStartedAt = new Date();
@@ -329,6 +337,11 @@
     usefulnessInput.addEventListener('input', () => {
       usefulnessOutput.value = usefulnessInput.value;
       usefulnessOutput.textContent = usefulnessInput.value;
+    });
+
+    notificationInput.addEventListener('input', () => {
+      notificationOutput.value = notificationInput.value;
+      notificationOutput.textContent = notificationInput.value;
     });
 
     updateNonTvFollowup();
