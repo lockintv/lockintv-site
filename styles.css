@@ -445,7 +445,7 @@ dd {
 
 .concept-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+  grid-template-columns: 1fr;
   gap: 18px;
   align-items: center;
   margin: 8px 0;
@@ -473,6 +473,15 @@ dd {
 .concept-visual {
   display: flex;
   justify-content: center;
+}
+
+.concept-product-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 8px;
+  box-shadow: 0 18px 44px rgba(0,0,0,0.25);
 }
 
 .mini-phone {
@@ -532,22 +541,6 @@ fieldset {
   border: 1px solid rgba(255,255,255,0.13);
   border-radius: 8px;
   background: #070c12;
-}
-
-.light-question-card {
-  border-color: rgba(5, 7, 10, 0.12);
-  background: #f7fbff;
-  color: var(--black);
-}
-
-.light-question-card legend,
-.light-question-card label {
-  color: var(--black);
-}
-
-.light-question-card input[type="radio"],
-.light-question-card input[type="checkbox"] {
-  accent-color: var(--blue);
 }
 
 legend,
