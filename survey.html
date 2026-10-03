@@ -28,7 +28,7 @@
       <p class="eyebrow">Quick Survey</p>
       <h1>Help shape LockIn TV.</h1>
       <p>We are testing an early product idea for sports fans. The survey starts with a few quick questions about how you watch live sports, then asks for your reaction to the concept.</p>
-      <p>After submitting, you can optionally enter for a chance to win a $50 <strong>Amazon</strong> gift card.</p>
+      <p>After submitting, you can optionally enter for a chance to win a <strong>$50 Amazon gift card</strong>.</p>
       <button class="button primary" type="button" id="startSurveyButton">Start survey</button>
     </section>
 
@@ -173,7 +173,7 @@
 
         <fieldset>
           <legend>10. Would you prefer the volume up any time the ball or puck is in play, or only during more important moments?</legend>
-          <p class="field-help">For example: in basketball, should backcourt possession count? In hockey, should calm defensive-zone possession count if nobody is pressuring the puck?</p>
+          <p class="field-help">For example: in basketball, should the volume stay up during a routine backcourt possession? In hockey, should it stay up when a team holds the puck calmly in its defensive zone with no pressure?</p>
           <label><input type="radio" name="preferred_volume_mode" value="Volume up any time the ball, puck, or play is live" required>Volume up any time the ball, puck, or play is live</label>
           <label><input type="radio" name="preferred_volume_mode" value="Volume up only for scoring chances, offensive pressure, or important moments">Volume up only for scoring chances, offensive pressure, or important moments</label>
           <label><input type="radio" name="preferred_volume_mode" value="Different modes depending on the sport">Different modes depending on the sport</label>
@@ -195,9 +195,9 @@
         </fieldset>
 
         <fieldset>
-          <legend>12. Which part would help you more?</legend>
+          <legend>12. Which feature would help you more?</legend>
           <label><input type="radio" name="most_valuable_feature" value="I multitask and miss plays, so the volume going up would pull me back in at the right time" required>I multitask and miss plays, so the volume going up would pull me back in at the right time</label>
-          <label><input type="radio" name="most_valuable_feature" value="I watch or listen to downtime unnecessarily, so the volume going down or off would let me step away until the game pulls me back in">I watch or listen to downtime unnecessarily, so the volume going down or off would let me step away until the game pulls me back in</label>
+          <label><input type="radio" name="most_valuable_feature" value="I watch or listen to downtime unnecessarily, so the volume going down or off would make it easier to tune out until the game pulls me back in">I watch or listen to downtime unnecessarily, so the volume going down or off would make it easier to tune out until the game pulls me back in</label>
           <label><input type="radio" name="most_valuable_feature" value="I do not see much value">I do not see much value</label>
         </fieldset>
 
@@ -254,7 +254,7 @@
     <section class="survey-layout hidden" id="giveawayPanel" aria-label="Optional giveaway entry">
       <div class="survey-card">
         <p class="eyebrow">Thank You</p>
-        <h2>Want to be entered to win a $50 <strong>Amazon</strong> gift card?</h2>
+        <h2>Want to be entered to win a <strong>$50 Amazon gift card</strong>?</h2>
         <p class="form-note">This is optional. Your survey answers were already submitted.</p>
         <form id="giveawayForm">
           <label for="giveawayEmail">Email</label>
@@ -288,7 +288,7 @@
 
   <script src="survey_config.js"></script>
   <script>
-    const SURVEY_VERSION = 'quick-product-validation-v10-2026-10-02';
+    const SURVEY_VERSION = 'quick-product-validation-v11-2026-10-03';
     const pageLoadedAt = new Date();
     let surveyStartedAt = null;
     let currentResponseId = null;
