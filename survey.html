@@ -28,7 +28,7 @@
       <p class="eyebrow">Quick Survey</p>
       <h1>Help shape LockIn TV.</h1>
       <p>We are testing an early product idea for sports fans. The survey starts with a few quick questions about how you watch live sports, then asks for your reaction to the concept.</p>
-      <p>After submitting, you can optionally enter for a chance to win a <strong>$50 Amazon gift card</strong>.</p>
+      <p>After submitting, you can optionally enter for a chance to win a <strong class="giveaway-emphasis">$50 Amazon gift card</strong>.</p>
       <button class="button primary" type="button" id="startSurveyButton">Start survey</button>
     </section>
 
@@ -79,7 +79,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>4. When you watch a full game, about how much of it do you actively watch?</legend>
+          <legend>4. When you sit down to watch live sports, about how much of the game are you actually watching closely?</legend>
           <label><input type="radio" name="active_watch_percentage" value="Less than 25%" required>Less than 25%</label>
           <label><input type="radio" name="active_watch_percentage" value="25%-49%">25%-49%</label>
           <label><input type="radio" name="active_watch_percentage" value="50%-59%">50%-59%</label>
@@ -254,7 +254,7 @@
     <section class="survey-layout hidden" id="giveawayPanel" aria-label="Optional giveaway entry">
       <div class="survey-card">
         <p class="eyebrow">Thank You</p>
-        <h2>Want to be entered to win a <strong>$50 Amazon gift card</strong>?</h2>
+        <h2>Want to be entered to win a <strong class="giveaway-emphasis">$50 Amazon gift card</strong>?</h2>
         <p class="form-note">This is optional. Your survey answers were already submitted.</p>
         <form id="giveawayForm">
           <label for="giveawayEmail">Email</label>
@@ -288,7 +288,7 @@
 
   <script src="survey_config.js"></script>
   <script>
-    const SURVEY_VERSION = 'quick-product-validation-v11-2026-10-03';
+    const SURVEY_VERSION = 'quick-product-validation-v12-2026-10-03';
     const pageLoadedAt = new Date();
     let surveyStartedAt = null;
     let currentResponseId = null;

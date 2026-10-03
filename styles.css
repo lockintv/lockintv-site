@@ -374,10 +374,13 @@ dd {
   font-size: 17px;
 }
 
-.survey-hero strong,
-.survey-card h2 strong {
+.giveaway-emphasis {
   color: var(--white);
-  font-weight: 800;
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-color: #ff8a1d;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 .survey-layout {
