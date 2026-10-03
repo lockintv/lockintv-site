@@ -113,7 +113,7 @@
 
         <fieldset>
           <legend>7. How often do you miss a play because you were distracted?</legend>
-          <label><input type="radio" name="miss_play_frequency" value="Almost every game" required>Almost every game</label>
+          <label><input type="radio" name="miss_play_frequency" value="Very often" required>Very often</label>
           <label><input type="radio" name="miss_play_frequency" value="Often">Often</label>
           <label><input type="radio" name="miss_play_frequency" value="Sometimes">Sometimes</label>
           <label><input type="radio" name="miss_play_frequency" value="Rarely">Rarely</label>
@@ -132,7 +132,7 @@
           <div class="concept-copy">
             <p class="eyebrow">The Idea</p>
             <h3>What if your sports audio followed the game?</h3>
-            <p>LockIn TV would be a smart soundbar for live sports. It raises the volume for game action and lowers it for commercials, halftime, and downtime.</p>
+            <p>LockIn TV would be a smart soundbar for live sports. It raises the volume for game action and lowers it for downtime and breaks, with you in control.</p>
             <p>Buy the soundbar once, link your phone, pick your game, set your volume levels, and watch normally. You can multitask when needed and lock in when the important moments happen.</p>
           </div>
           <div class="concept-visual" aria-label="Example LockIn TV volume settings">
@@ -196,9 +196,9 @@
         </section>
 
         <fieldset>
-          <legend>10. Would you prefer the volume up any time the ball or puck is in play, or only during more important moments?</legend>
-          <p class="field-help">For example: in basketball, should the volume stay up during a routine backcourt possession? In hockey, should it stay up when a team holds the puck calmly in its defensive zone with no pressure?</p>
-          <label><input type="radio" name="preferred_volume_mode" value="Volume up any time the ball, puck, or play is live" required>Volume up any time the ball, puck, or play is live</label>
+          <legend>10. Would you prefer the volume up any time play is live, or only during more important moments?</legend>
+          <p class="field-help">This would vary by sport. For example: in basketball, should the volume stay up during a routine backcourt possession? In hockey, should it stay up when a team holds the puck calmly in its defensive zone with no pressure?</p>
+          <label><input type="radio" name="preferred_volume_mode" value="Volume up any time play is live" required>Volume up any time play is live</label>
           <label><input type="radio" name="preferred_volume_mode" value="Volume up only for scoring chances, offensive pressure, or important moments">Volume up only for scoring chances, offensive pressure, or important moments</label>
           <label><input type="radio" name="preferred_volume_mode" value="Different modes depending on the sport">Different modes depending on the sport</label>
           <label><input type="radio" name="preferred_volume_mode" value="Not sure">Not sure</label>
@@ -250,7 +250,15 @@
           <p class="field-error hidden" id="concernError">Please choose at least one concern.</p>
         </fieldset>
 
-        <label for="open_feedback">15. Any other thoughts or suggestions?</label>
+        <fieldset>
+          <legend>15. Assuming reasonable pricing, which best describes you?</legend>
+          <label><input type="radio" name="customer_likelihood" value="I understand the product and think it would be very helpful" required>I understand the product and think it would be very helpful</label>
+          <label><input type="radio" name="customer_likelihood" value="I understand the product and find it helpful, but would be hesitant to pay for it">I understand the product and find it helpful, but would be hesitant to pay for it</label>
+          <label><input type="radio" name="customer_likelihood" value="I understand the product and do not think it would be helpful">I understand the product and do not think it would be helpful</label>
+          <label><input type="radio" name="customer_likelihood" value="I am unsure and would need more information">I am unsure and would need more information</label>
+        </fieldset>
+
+        <label for="open_feedback">16. Any other thoughts or suggestions?</label>
         <textarea id="open_feedback" name="open_feedback" rows="4"></textarea>
 
         <p class="form-note" id="surveyStatus"></p>
@@ -295,7 +303,7 @@
 
   <script src="survey_config.js"></script>
   <script>
-    const SURVEY_VERSION = 'quick-product-validation-v13-2026-10-03';
+    const SURVEY_VERSION = 'quick-product-validation-v14-2026-10-03';
     const pageLoadedAt = new Date();
     let surveyStartedAt = null;
     let currentResponseId = null;
