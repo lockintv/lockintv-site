@@ -80,7 +80,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>4. When you watch live sports, about how much of the game do you feel like you really follow?</legend>
+          <legend>4. When you watch live sports, about how much of the game do you feel like you really take in?</legend>
           <label><input type="radio" name="active_watch_percentage" value="Less than 25%" required>Less than 25%</label>
           <label><input type="radio" name="active_watch_percentage" value="25%-49%">25%-49%</label>
           <label><input type="radio" name="active_watch_percentage" value="50%-59%">50%-59%</label>
@@ -123,7 +123,7 @@
 
         <section class="concept-card" aria-label="Product concept">
           <div class="concept-copy">
-            <p class="eyebrow">The Idea</p>
+            <p class="eyebrow">Our Idea</p>
             <h3>What if your sports audio followed the game?</h3>
             <p>LockIn TV would be a smart soundbar for live sports. It raises the volume for game action and lowers it for downtime and breaks, with you in control.</p>
             <p>Buy the soundbar once, link your phone, pick your game, set your volume levels, and watch normally. You can multitask when needed and lock in when the important moments happen.</p>
@@ -200,9 +200,9 @@
           <legend>10. Which sports would you most likely use this for? Select all that apply.</legend>
           <label><input type="checkbox" name="sports_use_cases" value="Football (NFL / college football)">Football (NFL / college football)</label>
           <label><input type="checkbox" name="sports_use_cases" value="Basketball (NBA / NCAAM / NCAAW)">Basketball (NBA / NCAAM / NCAAW)</label>
-          <label><input type="checkbox" name="sports_use_cases" value="Baseball (MLB)">Baseball (MLB)</label>
-          <label><input type="checkbox" name="sports_use_cases" value="Hockey (NHL)">Hockey (NHL)</label>
-          <label><input type="checkbox" name="sports_use_cases" value="Soccer (EPL / Champions League / MLS)">Soccer (EPL / Champions League / MLS)</label>
+          <label><input type="checkbox" name="sports_use_cases" value="Baseball">Baseball</label>
+          <label><input type="checkbox" name="sports_use_cases" value="Hockey">Hockey</label>
+          <label><input type="checkbox" name="sports_use_cases" value="Soccer">Soccer</label>
           <label><input type="checkbox" name="sports_use_cases" value="UFC/boxing">UFC/boxing</label>
           <label><input type="checkbox" name="sports_use_cases" value="Tennis">Tennis</label>
           <label><input type="checkbox" name="sports_use_cases" value="I would not use it for any sports">I would not use it for any sports</label>
@@ -211,7 +211,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>11. What would you be willing to pay upfront for the hardware if it worked well?</legend>
+          <legend>11. What do you think is a reasonable upfront cost for the hardware?</legend>
           <label><input type="radio" name="hardware_price" value="$40 or less" required>$40 or less</label>
           <label><input type="radio" name="hardware_price" value="$41-$60">$41-$60</label>
           <label><input type="radio" name="hardware_price" value="$61-$80">$61-$80</label>
@@ -222,7 +222,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>12. What monthly price would feel reasonable?</legend>
+          <legend>12. For the monthly subscription to use the service, what price do you think is reasonable?</legend>
           <label><input type="radio" name="monthly_price" value="$0" required>$0</label>
           <label><input type="radio" name="monthly_price" value="$2.99/month">$2.99/month</label>
           <label><input type="radio" name="monthly_price" value="$4.99/month">$4.99/month</label>
@@ -233,7 +233,7 @@
 
         <fieldset data-required-checkbox="biggest_concern">
           <legend>13. What is your biggest concern or reason you might not use it? Select all that apply.</legend>
-          <label><input type="checkbox" name="biggest_concern" value="It might miss important plays or change volume at the wrong time">It might miss important plays or change volume at the wrong time</label>
+          <label><input type="checkbox" name="biggest_concern" value="I do not trust that it would work, it may change volume at the wrong time, or have other audio issues">I do not trust that it would work, it may change volume at the wrong time, or have other audio issues.</label>
           <label><input type="checkbox" name="biggest_concern" value="It might be hard to set up or not work with my TV/apps">It might be hard to set up or not work with my TV/apps</label>
           <label><input type="checkbox" name="biggest_concern" value="I do not want extra hardware">I do not want extra hardware</label>
           <label><input type="checkbox" name="biggest_concern" value="I do not want another subscription">I do not want another subscription</label>
@@ -244,7 +244,7 @@
 
         <fieldset>
           <legend>14. Assuming reasonable pricing, which best describes you?</legend>
-          <label><input type="radio" name="customer_likelihood" value="I understand the product and think it would be very helpful" required>I understand the product and think it would be very helpful</label>
+          <label><input type="radio" name="customer_likelihood" value="I understand the product, think it would be very helpful, and would likely be willing to pay for it" required>I understand the product, think it would be very helpful, and would likely be willing to pay for it</label>
           <label><input type="radio" name="customer_likelihood" value="I understand the product and find it helpful, but would be hesitant to pay for it">I understand the product and find it helpful, but would be hesitant to pay for it</label>
           <label><input type="radio" name="customer_likelihood" value="I understand the product and do not think it would be helpful">I understand the product and do not think it would be helpful</label>
           <label><input type="radio" name="customer_likelihood" value="I am unsure and would need more information">I am unsure and would need more information</label>
@@ -296,7 +296,7 @@
 
   <script src="survey_config.js"></script>
   <script>
-    const SURVEY_VERSION = 'quick-product-validation-v15-2026-10-03';
+    const SURVEY_VERSION = 'quick-product-validation-v16-2026-10-03';
     const pageLoadedAt = new Date();
     let surveyStartedAt = null;
     let currentResponseId = null;
