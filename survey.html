@@ -112,21 +112,20 @@
         </fieldset>
 
         <fieldset>
-          <legend>7. How often do you lower or mute the TV during commercials, halftime, or downtime?</legend>
-          <label><input type="radio" name="mute_downtime_frequency" value="Almost every game" required>Almost every game</label>
-          <label><input type="radio" name="mute_downtime_frequency" value="Often">Often</label>
-          <label><input type="radio" name="mute_downtime_frequency" value="Sometimes">Sometimes</label>
-          <label><input type="radio" name="mute_downtime_frequency" value="Rarely">Rarely</label>
-          <label><input type="radio" name="mute_downtime_frequency" value="Never">Never</label>
-        </fieldset>
-
-        <fieldset>
-          <legend>8. How often do you miss a play because you were distracted?</legend>
+          <legend>7. How often do you miss a play because you were distracted?</legend>
           <label><input type="radio" name="miss_play_frequency" value="Almost every game" required>Almost every game</label>
           <label><input type="radio" name="miss_play_frequency" value="Often">Often</label>
           <label><input type="radio" name="miss_play_frequency" value="Sometimes">Sometimes</label>
           <label><input type="radio" name="miss_play_frequency" value="Rarely">Rarely</label>
           <label><input type="radio" name="miss_play_frequency" value="Never">Never</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>8. Which describes you most accurately?</legend>
+          <label><input type="radio" name="viewer_profile" value="I often multitask during games and occasionally miss big plays" required>I often multitask during games and occasionally miss big plays</label>
+          <label><input type="radio" name="viewer_profile" value="I usually watch the game closely, including the downtime between plays">I usually watch the game closely, including the downtime between plays</label>
+          <label><input type="radio" name="viewer_profile" value="I multitask, but I usually turn my attention back when action resumes">I multitask, but I usually turn my attention back when action resumes</label>
+          <label><input type="radio" name="viewer_profile" value="None of these describe me well">None of these describe me well</label>
         </fieldset>
 
         <section class="concept-card" aria-label="Product concept">
@@ -161,15 +160,40 @@
           </div>
         </section>
 
-        <div class="scale-question">
-          <label for="usefulness_score">9. How useful does this sound for the way you actually watch sports?</label>
-          <div class="scale-row">
-            <span>Not useful</span>
-            <input id="usefulness_score" name="usefulness_score" type="range" min="1" max="10" value="5" required>
-            <output id="usefulnessOutput">5</output>
-            <span>Extremely useful</span>
+        <section class="feature-ratings" aria-label="Feature usefulness ratings">
+          <h3>9. How helpful would each feature be?</h3>
+          <p class="field-help">1 = would not use it, 4 = not very helpful, 7 = somewhat helpful, 10 = very helpful.</p>
+
+          <div class="scale-question">
+            <label for="feature_action_audio_score">The volume goes up when live action starts, then lowers when action stops.</label>
+            <div class="scale-row">
+              <span>Would not use</span>
+              <input id="feature_action_audio_score" name="feature_action_audio_score" type="range" min="1" max="10" value="5" required>
+              <output id="actionFeatureOutput">5</output>
+              <span>Very helpful</span>
+            </div>
           </div>
-        </div>
+
+          <div class="scale-question">
+            <label for="feature_break_audio_score">The volume goes down or off during commercials, halftime, intermissions, or long breaks.</label>
+            <div class="scale-row">
+              <span>Would not use</span>
+              <input id="feature_break_audio_score" name="feature_break_audio_score" type="range" min="1" max="10" value="5" required>
+              <output id="breakFeatureOutput">5</output>
+              <span>Very helpful</span>
+            </div>
+          </div>
+
+          <div class="scale-question">
+            <label for="feature_notification_score">You get a phone notification when the game is back after halftime, an intermission, or a long break.</label>
+            <div class="scale-row">
+              <span>Would not use</span>
+              <input id="feature_notification_score" name="feature_notification_score" type="range" min="1" max="10" value="5" required>
+              <output id="notificationFeatureOutput">5</output>
+              <span>Very helpful</span>
+            </div>
+          </div>
+        </section>
 
         <fieldset>
           <legend>10. Would you prefer the volume up any time the ball or puck is in play, or only during more important moments?</legend>
@@ -195,24 +219,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>12. Which feature would help you more?</legend>
-          <label><input type="radio" name="most_valuable_feature" value="I multitask and miss plays, so the volume going up would pull me back in at the right time" required>I multitask and miss plays, so the volume going up would pull me back in at the right time</label>
-          <label><input type="radio" name="most_valuable_feature" value="I watch or listen to downtime unnecessarily, so the volume going down or off would make it easier to tune out until the game pulls me back in">I watch or listen to downtime unnecessarily, so the volume going down or off would make it easier to tune out until the game pulls me back in</label>
-          <label><input type="radio" name="most_valuable_feature" value="I do not see much value">I do not see much value</label>
-        </fieldset>
-
-        <div class="scale-question">
-          <label for="return_notification_score">13. How helpful would it be to get a phone notification when the game is back after halftime, an intermission, or a long break?</label>
-          <div class="scale-row">
-            <span>Not helpful</span>
-            <input id="return_notification_score" name="return_notification_score" type="range" min="1" max="10" value="5" required>
-            <output id="notificationOutput">5</output>
-            <span>Extremely helpful</span>
-          </div>
-        </div>
-
-        <fieldset>
-          <legend>14. What would you be willing to pay upfront for the hardware if it worked well?</legend>
+          <legend>12. What would you be willing to pay upfront for the hardware if it worked well?</legend>
           <label><input type="radio" name="hardware_price" value="$40 or less" required>$40 or less</label>
           <label><input type="radio" name="hardware_price" value="$41-$60">$41-$60</label>
           <label><input type="radio" name="hardware_price" value="$61-$80">$61-$80</label>
@@ -223,7 +230,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>15. What monthly price would feel reasonable?</legend>
+          <legend>13. What monthly price would feel reasonable?</legend>
           <label><input type="radio" name="monthly_price" value="$0" required>$0</label>
           <label><input type="radio" name="monthly_price" value="$2.99/month">$2.99/month</label>
           <label><input type="radio" name="monthly_price" value="$4.99/month">$4.99/month</label>
@@ -233,7 +240,7 @@
         </fieldset>
 
         <fieldset data-required-checkbox="biggest_concern">
-          <legend>16. What is your biggest concern or reason you might not use it? Select all that apply.</legend>
+          <legend>14. What is your biggest concern or reason you might not use it? Select all that apply.</legend>
           <label><input type="checkbox" name="biggest_concern" value="It might miss important plays or change volume at the wrong time">It might miss important plays or change volume at the wrong time</label>
           <label><input type="checkbox" name="biggest_concern" value="It might be hard to set up or not work with my TV/apps">It might be hard to set up or not work with my TV/apps</label>
           <label><input type="checkbox" name="biggest_concern" value="I do not want extra hardware">I do not want extra hardware</label>
@@ -243,7 +250,7 @@
           <p class="field-error hidden" id="concernError">Please choose at least one concern.</p>
         </fieldset>
 
-        <label for="open_feedback">17. Any other thoughts or suggestions?</label>
+        <label for="open_feedback">15. Any other thoughts or suggestions?</label>
         <textarea id="open_feedback" name="open_feedback" rows="4"></textarea>
 
         <p class="form-note" id="surveyStatus"></p>
@@ -288,7 +295,7 @@
 
   <script src="survey_config.js"></script>
   <script>
-    const SURVEY_VERSION = 'quick-product-validation-v12-2026-10-03';
+    const SURVEY_VERSION = 'quick-product-validation-v13-2026-10-03';
     const pageLoadedAt = new Date();
     let surveyStartedAt = null;
     let currentResponseId = null;
@@ -311,10 +318,12 @@
     const fanOutput = document.getElementById('fanOutput');
     const tvWatchInput = document.getElementById('tv_watch_percentage');
     const tvWatchOutput = document.getElementById('tvWatchOutput');
-    const usefulnessInput = document.getElementById('usefulness_score');
-    const usefulnessOutput = document.getElementById('usefulnessOutput');
-    const notificationInput = document.getElementById('return_notification_score');
-    const notificationOutput = document.getElementById('notificationOutput');
+    const actionFeatureInput = document.getElementById('feature_action_audio_score');
+    const actionFeatureOutput = document.getElementById('actionFeatureOutput');
+    const breakFeatureInput = document.getElementById('feature_break_audio_score');
+    const breakFeatureOutput = document.getElementById('breakFeatureOutput');
+    const notificationFeatureInput = document.getElementById('feature_notification_score');
+    const notificationFeatureOutput = document.getElementById('notificationFeatureOutput');
 
     startButton.addEventListener('click', () => {
       surveyStartedAt = new Date();
@@ -334,15 +343,9 @@
       updateNonTvFollowup();
     });
 
-    usefulnessInput.addEventListener('input', () => {
-      usefulnessOutput.value = usefulnessInput.value;
-      usefulnessOutput.textContent = usefulnessInput.value;
-    });
-
-    notificationInput.addEventListener('input', () => {
-      notificationOutput.value = notificationInput.value;
-      notificationOutput.textContent = notificationInput.value;
-    });
+    bindRangeOutput(actionFeatureInput, actionFeatureOutput);
+    bindRangeOutput(breakFeatureInput, breakFeatureOutput);
+    bindRangeOutput(notificationFeatureInput, notificationFeatureOutput);
 
     updateNonTvFollowup();
 
@@ -430,6 +433,13 @@
         option.disabled = !showFollowup;
         if (!showFollowup) option.checked = false;
       }
+    }
+
+    function bindRangeOutput(input, output) {
+      input.addEventListener('input', () => {
+        output.value = input.value;
+        output.textContent = input.value;
+      });
     }
 
     function formToObject(form) {
