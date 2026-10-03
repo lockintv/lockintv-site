@@ -28,7 +28,7 @@
       <p class="eyebrow">Quick Survey</p>
       <h1>Help shape LockIn TV.</h1>
       <p>We are testing an early product idea for sports fans. The survey starts with a few quick questions about how you watch live sports, then asks for your reaction to the concept.</p>
-      <p>After submitting, you can optionally enter for a chance to win a $50 Amazon gift card.</p>
+      <p>After submitting, you can optionally enter for a chance to win a $50 <strong>Amazon</strong> gift card.</p>
       <button class="button primary" type="button" id="startSurveyButton">Start survey</button>
     </section>
 
@@ -121,7 +121,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>8. How often do you miss a play because you were distracted or the volume was low/muted?</legend>
+          <legend>8. How often do you miss a play because you were distracted?</legend>
           <label><input type="radio" name="miss_play_frequency" value="Almost every game" required>Almost every game</label>
           <label><input type="radio" name="miss_play_frequency" value="Often">Often</label>
           <label><input type="radio" name="miss_play_frequency" value="Sometimes">Sometimes</label>
@@ -172,10 +172,10 @@
         </div>
 
         <fieldset>
-          <legend>10. Which volume mode would be more helpful to you?</legend>
-          <p class="field-help">For example, in basketball this could mean whether the volume is up even when the ball is in the backcourt. In hockey, it could mean whether the volume is up during a line change or when the puck is behind the net.</p>
+          <legend>10. Would you prefer the volume up any time the ball or puck is in play, or only during more important moments?</legend>
+          <p class="field-help">For example: in basketball, should backcourt possession count? In hockey, should calm defensive-zone possession count if nobody is pressuring the puck?</p>
           <label><input type="radio" name="preferred_volume_mode" value="Volume up any time the ball, puck, or play is live" required>Volume up any time the ball, puck, or play is live</label>
-          <label><input type="radio" name="preferred_volume_mode" value="Volume up only for legitimate scoring chances or important moments">Volume up only for legitimate scoring chances or important moments</label>
+          <label><input type="radio" name="preferred_volume_mode" value="Volume up only for scoring chances, offensive pressure, or important moments">Volume up only for scoring chances, offensive pressure, or important moments</label>
           <label><input type="radio" name="preferred_volume_mode" value="Different modes depending on the sport">Different modes depending on the sport</label>
           <label><input type="radio" name="preferred_volume_mode" value="Not sure">Not sure</label>
         </fieldset>
@@ -195,14 +195,14 @@
         </fieldset>
 
         <fieldset>
-          <legend>12. Which part would matter more to you?</legend>
-          <label><input type="radio" name="most_valuable_feature" value="The volume going up when live action starts or the game returns, so I can refocus at the right time" required>The volume going up when live action starts or the game returns, so I can refocus at the right time</label>
-          <label><input type="radio" name="most_valuable_feature" value="The volume going down or off during downtime and commercials, so I can step away or multitask without worrying I will miss the restart">The volume going down or off during downtime and commercials, so I can step away or multitask without worrying I will miss the restart</label>
+          <legend>12. Which part would help you more?</legend>
+          <label><input type="radio" name="most_valuable_feature" value="I multitask and miss plays, so the volume going up would pull me back in at the right time" required>I multitask and miss plays, so the volume going up would pull me back in at the right time</label>
+          <label><input type="radio" name="most_valuable_feature" value="I watch or listen to downtime unnecessarily, so the volume going down or off would let me step away until the game pulls me back in">I watch or listen to downtime unnecessarily, so the volume going down or off would let me step away until the game pulls me back in</label>
           <label><input type="radio" name="most_valuable_feature" value="I do not see much value">I do not see much value</label>
         </fieldset>
 
         <div class="scale-question">
-          <label for="return_notification_score">13. How helpful would it be to get a phone notification when the game is back after halftime or an extended break?</label>
+          <label for="return_notification_score">13. How helpful would it be to get a phone notification when the game is back after halftime, an intermission, or a long break?</label>
           <div class="scale-row">
             <span>Not helpful</span>
             <input id="return_notification_score" name="return_notification_score" type="range" min="1" max="10" value="5" required>
@@ -254,7 +254,7 @@
     <section class="survey-layout hidden" id="giveawayPanel" aria-label="Optional giveaway entry">
       <div class="survey-card">
         <p class="eyebrow">Thank You</p>
-        <h2>Want to be entered to win a $50 Amazon gift card?</h2>
+        <h2>Want to be entered to win a $50 <strong>Amazon</strong> gift card?</h2>
         <p class="form-note">This is optional. Your survey answers were already submitted.</p>
         <form id="giveawayForm">
           <label for="giveawayEmail">Email</label>
@@ -288,7 +288,7 @@
 
   <script src="survey_config.js"></script>
   <script>
-    const SURVEY_VERSION = 'quick-product-validation-v9-2026-10-01';
+    const SURVEY_VERSION = 'quick-product-validation-v10-2026-10-02';
     const pageLoadedAt = new Date();
     let surveyStartedAt = null;
     let currentResponseId = null;
@@ -422,7 +422,7 @@
     }
 
     function updateNonTvFollowup() {
-      const showFollowup = Number(tvWatchInput.value) < 100;
+      const showFollowup = Number(tvWatchInput.value) < 90;
       nonTvDeviceFieldset.classList.toggle('hidden', !showFollowup);
       const options = nonTvDeviceFieldset.querySelectorAll('input[name="non_tv_device_mix"]');
       for (const option of options) {
