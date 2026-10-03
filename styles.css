@@ -374,6 +374,12 @@ dd {
   font-size: 17px;
 }
 
+.survey-hero strong,
+.survey-card h2 strong {
+  color: var(--white);
+  font-weight: 800;
+}
+
 .survey-layout {
   display: grid;
   grid-template-columns: minmax(0, 860px);
