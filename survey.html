@@ -41,7 +41,7 @@
           <p>Please answer based on what you actually do when watching sports, not what sounds ideal.</p>
         </div>
 
-        <fieldset>
+        <fieldset class="light-question-card">
           <legend>1. How often do you watch live sports?</legend>
           <label><input type="radio" name="watch_frequency" value="Daily or almost daily" required>Daily or almost daily</label>
           <label><input type="radio" name="watch_frequency" value="A few times per week">A few times per week</label>
@@ -80,7 +80,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>4. When you watch live sports, about how much of the game do you feel like you really take in?</legend>
+          <legend>4. When you watch live sports, about how much of the game do you actually watch on-screen?</legend>
           <label><input type="radio" name="active_watch_percentage" value="Less than 25%" required>Less than 25%</label>
           <label><input type="radio" name="active_watch_percentage" value="25%-49%">25%-49%</label>
           <label><input type="radio" name="active_watch_percentage" value="50%-59%">50%-59%</label>
@@ -233,8 +233,8 @@
 
         <fieldset data-required-checkbox="biggest_concern">
           <legend>13. What is your biggest concern or reason you might not use it? Select all that apply.</legend>
-          <label><input type="checkbox" name="biggest_concern" value="I do not trust that it would work, it may change volume at the wrong time, or have other audio issues">I do not trust that it would work, it may change volume at the wrong time, or have other audio issues.</label>
-          <label><input type="checkbox" name="biggest_concern" value="It might be hard to set up or not work with my TV/apps">It might be hard to set up or not work with my TV/apps</label>
+          <label><input type="checkbox" name="biggest_concern" value="There may be technical or software issues, like incorrect volume changes, delays, or other audio problems">There may be technical or software issues, like incorrect volume changes, delays, or other audio problems.</label>
+          <label><input type="checkbox" name="biggest_concern" value="It may be difficult to physically set up">It may be difficult to physically set up.</label>
           <label><input type="checkbox" name="biggest_concern" value="I do not want extra hardware">I do not want extra hardware</label>
           <label><input type="checkbox" name="biggest_concern" value="I do not want another subscription">I do not want another subscription</label>
           <label><input type="checkbox" name="biggest_concern" value="I do not watch enough sports">I do not watch enough sports</label>
@@ -296,7 +296,7 @@
 
   <script src="survey_config.js"></script>
   <script>
-    const SURVEY_VERSION = 'quick-product-validation-v16-2026-10-03';
+    const SURVEY_VERSION = 'quick-product-validation-v17-2026-10-03';
     const pageLoadedAt = new Date();
     let surveyStartedAt = null;
     let currentResponseId = null;

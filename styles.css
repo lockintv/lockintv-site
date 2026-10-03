@@ -534,6 +534,22 @@ fieldset {
   background: #070c12;
 }
 
+.light-question-card {
+  border-color: rgba(5, 7, 10, 0.12);
+  background: #f7fbff;
+  color: var(--black);
+}
+
+.light-question-card legend,
+.light-question-card label {
+  color: var(--black);
+}
+
+.light-question-card input[type="radio"],
+.light-question-card input[type="checkbox"] {
+  accent-color: var(--blue);
+}
+
 legend,
 .scale-question > label {
   color: var(--white);
