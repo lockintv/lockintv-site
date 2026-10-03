@@ -472,6 +472,7 @@ dd {
 
 .concept-visual {
   display: flex;
+  position: relative;
   justify-content: center;
 }
 
@@ -482,6 +483,21 @@ dd {
   border: 1px solid rgba(255,255,255,0.18);
   border-radius: 8px;
   box-shadow: 0 18px 44px rgba(0,0,0,0.25);
+}
+
+.concept-image-disclaimer {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  max-width: calc(100% - 28px);
+  padding: 7px 9px;
+  border-radius: 6px;
+  background: rgba(5, 7, 10, 0.52);
+  color: rgba(247, 251, 255, 0.92);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.62);
 }
 
 .mini-phone {
