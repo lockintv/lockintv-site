@@ -416,6 +416,35 @@ dd {
   text-underline-offset: 3px;
 }
 
+.surveycircle-box {
+  display: grid;
+  gap: 8px;
+  margin: 8px 0 4px;
+  padding: 14px;
+  border: 1px solid rgba(126, 177, 255, 0.26);
+  border-radius: 8px;
+  background: rgba(29, 115, 255, 0.09);
+}
+
+.surveycircle-box p {
+  margin: 0;
+  color: rgba(247, 251, 255, 0.82);
+  font-size: 14px;
+}
+
+.surveycircle-box a {
+  color: #9fc4ff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.surveycircle-code {
+  color: var(--white) !important;
+  font-size: 16px !important;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
 .survey-layout {
   display: grid;
   grid-template-columns: minmax(0, 860px);
