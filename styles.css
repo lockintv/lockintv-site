@@ -416,10 +416,23 @@ dd {
   text-underline-offset: 3px;
 }
 
+.surveycircle-section {
+  display: grid;
+  gap: 8px;
+  margin-top: 26px;
+}
+
+.surveycircle-section h3 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 900;
+}
+
 .surveycircle-box {
   display: grid;
   gap: 8px;
-  margin: 8px 0 4px;
+  margin: 0 0 4px;
   padding: 14px;
   border: 1px solid rgba(126, 177, 255, 0.26);
   border-radius: 8px;
