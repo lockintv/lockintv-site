@@ -122,6 +122,16 @@
           <label><input type="radio" name="miss_play_frequency" value="Never">Never</label>
         </fieldset>
 
+        <label for="favorite_sport_or_team">8. What sport, league, or team do you watch most?</label>
+        <input id="favorite_sport_or_team" name="favorite_sport_or_team" type="text" autocomplete="off" placeholder="Example: NFL, Knicks, Yankees, Premier League" required>
+
+        <fieldset>
+          <legend>9. Quick quality check: please select "Between action" for this question.</legend>
+          <label><input type="radio" name="attention_check" value="Action" required>Action</label>
+          <label><input type="radio" name="attention_check" value="Between action">Between action</label>
+          <label><input type="radio" name="attention_check" value="No action">No action</label>
+        </fieldset>
+
         <section class="concept-card" aria-label="Product concept">
           <div class="concept-copy">
             <p class="eyebrow">Our Idea</p>
@@ -136,7 +146,7 @@
         </section>
 
         <section class="feature-ratings" aria-label="Feature usefulness ratings">
-          <h3>8. How helpful would each feature be?</h3>
+          <h3>10. How helpful would each feature be?</h3>
 
           <div class="scale-question">
             <label for="feature_action_audio_score">The volume goes up when live action starts, then lowers when action stops.</label>
@@ -170,7 +180,7 @@
         </section>
 
         <fieldset>
-          <legend>9. Would you prefer the volume up any time play is live, or only during more important moments?</legend>
+          <legend>11. Would you prefer the volume up any time play is live, or only during more important moments?</legend>
           <p class="field-help">This would vary by sport. For example: in basketball, should the volume stay up during a routine backcourt possession? In hockey, should it stay up when a team holds the puck calmly in its defensive zone with no pressure?</p>
           <label><input type="radio" name="preferred_volume_mode" value="Volume up any time play is live" required>Volume up any time play is live</label>
           <label><input type="radio" name="preferred_volume_mode" value="Volume up only for scoring chances, offensive pressure, or important moments">Volume up only for scoring chances, offensive pressure, or important moments</label>
@@ -179,7 +189,7 @@
         </fieldset>
 
         <fieldset data-required-checkbox="sports_use_cases">
-          <legend>10. Which sports would you most likely use this for? Select all that apply.</legend>
+          <legend>12. Which sports would you most likely use this for? Select all that apply.</legend>
           <label><input type="checkbox" name="sports_use_cases" value="Football (NFL / college football)">Football (NFL / college football)</label>
           <label><input type="checkbox" name="sports_use_cases" value="Basketball (NBA / NCAAM / NCAAW)">Basketball (NBA / NCAAM / NCAAW)</label>
           <label><input type="checkbox" name="sports_use_cases" value="Baseball">Baseball</label>
@@ -193,7 +203,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>11. What do you think is a reasonable upfront cost for the hardware?</legend>
+          <legend>13. What do you think is a reasonable upfront cost for the hardware?</legend>
           <label><input type="radio" name="hardware_price" value="$40 or less" required>$40 or less</label>
           <label><input type="radio" name="hardware_price" value="$41-$60">$41-$60</label>
           <label><input type="radio" name="hardware_price" value="$61-$80">$61-$80</label>
@@ -204,7 +214,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>12. For the monthly subscription to use the service, what price do you think is reasonable?</legend>
+          <legend>14. For the monthly subscription to use the service, what price do you think is reasonable?</legend>
           <label><input type="radio" name="monthly_price" value="$0" required>$0</label>
           <label><input type="radio" name="monthly_price" value="$2.99/month">$2.99/month</label>
           <label><input type="radio" name="monthly_price" value="$4.99/month">$4.99/month</label>
@@ -214,7 +224,7 @@
         </fieldset>
 
         <fieldset data-required-checkbox="biggest_concern">
-          <legend>13. What is your biggest concern or reason you might not use it? Select all that apply.</legend>
+          <legend>15. What is your biggest concern or reason you might not use it? Select all that apply.</legend>
           <label><input type="checkbox" name="biggest_concern" value="There may be technical or software issues, like incorrect volume changes, delays, or other audio problems">There may be technical or software issues, like incorrect volume changes, delays, or other audio problems.</label>
           <label><input type="checkbox" name="biggest_concern" value="It may be difficult to physically set up">It may be difficult to physically set up.</label>
           <label><input type="checkbox" name="biggest_concern" value="I do not want extra hardware">I do not want extra hardware</label>
@@ -225,14 +235,19 @@
         </fieldset>
 
         <fieldset>
-          <legend>14. Assuming reasonable pricing, which best describes you?</legend>
+          <legend>16. Assuming reasonable pricing, which best describes you?</legend>
           <label><input type="radio" name="customer_likelihood" value="I understand the product, think it would be very helpful, and would likely be willing to pay for it" required>I understand the product, think it would be very helpful, and would likely be willing to pay for it</label>
           <label><input type="radio" name="customer_likelihood" value="I understand the product and find it helpful, but would be hesitant to pay for it">I understand the product and find it helpful, but would be hesitant to pay for it</label>
           <label><input type="radio" name="customer_likelihood" value="I understand the product and do not think it would be helpful">I understand the product and do not think it would be helpful</label>
           <label><input type="radio" name="customer_likelihood" value="I am unsure and would need more information">I am unsure and would need more information</label>
         </fieldset>
 
-        <label for="open_feedback">15. Any other thoughts or suggestions?</label>
+        <label for="usage_explanation">17. In one sentence, how would you personally use LockIn TV while watching sports?</label>
+        <p class="field-help">A specific answer helps us understand whether the concept is clear.</p>
+        <textarea id="usage_explanation" name="usage_explanation" rows="3" minlength="40" required placeholder="Example: I would use it while cooking during NFL games so I can hear when the next play starts."></textarea>
+        <p class="field-error hidden" id="usageExplanationError">Please write a specific sentence about how you would use it.</p>
+
+        <label for="open_feedback">18. Any other thoughts or suggestions?</label>
         <textarea id="open_feedback" name="open_feedback" rows="4"></textarea>
 
         <p class="form-note" id="surveyStatus"></p>
@@ -287,8 +302,9 @@
 
   <script src="survey_config.js"></script>
   <script>
-    const SURVEY_VERSION = 'quick-product-validation-v22-2026-10-11';
+    const SURVEY_VERSION = 'quick-product-validation-v23-2026-10-12';
     const pageLoadedAt = new Date();
+    const sourceInfo = getSourceInfo();
     let surveyStartedAt = null;
     let currentResponseId = null;
 
@@ -306,6 +322,7 @@
     const distractionError = document.getElementById('distractionError');
     const sportsError = document.getElementById('sportsError');
     const concernError = document.getElementById('concernError');
+    const usageExplanationError = document.getElementById('usageExplanationError');
     const fanInput = document.getElementById('sports_fan_score');
     const fanOutput = document.getElementById('fanOutput');
     const tvWatchInput = document.getElementById('tv_watch_percentage');
@@ -344,6 +361,7 @@
     surveyForm.addEventListener('submit', async (event) => {
       event.preventDefault();
       if (!validateRequiredCheckboxes()) return;
+      if (!validateUsageExplanation()) return;
 
       const submittedAt = new Date();
       const responseId = crypto.randomUUID ? crypto.randomUUID() : `survey-${Date.now()}-${Math.random().toString(16).slice(2)}`;
@@ -357,6 +375,10 @@
         surveySubmittedAt: submittedAt.toISOString(),
         durationMs: submittedAt.getTime() - (surveyStartedAt || pageLoadedAt).getTime(),
         pageToStartMs: (surveyStartedAt || submittedAt).getTime() - pageLoadedAt.getTime(),
+        source: sourceInfo.source,
+        sourceDetail: sourceInfo.detail,
+        pageUrl: window.location.href,
+        referrer: document.referrer || '',
         userAgent: navigator.userAgent,
         language: navigator.language,
         viewport: `${window.innerWidth}x${window.innerHeight}`,
@@ -416,6 +438,31 @@
       return !firstError;
     }
 
+    function validateUsageExplanation() {
+      const value = document.getElementById('usage_explanation').value.trim();
+      const normalized = value.toLowerCase().replace(/\s+/g, ' ');
+      const genericAnswers = new Set([
+        'satisfied',
+        'satisfaction',
+        'satisfactory',
+        'none',
+        'no',
+        'n/a',
+        'na',
+        'good',
+        'ok',
+        'okay',
+        'yes'
+      ]);
+      const wordCount = normalized.split(/\s+/).filter(Boolean).length;
+      const isValid = value.length >= 40 && wordCount >= 8 && !genericAnswers.has(normalized);
+      usageExplanationError.classList.toggle('hidden', isValid);
+      if (!isValid) {
+        usageExplanationError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      return isValid;
+    }
+
     function updateNonTvFollowup() {
       const showFollowup = Number(tvWatchInput.value) < 90;
       nonTvDeviceFieldset.classList.toggle('hidden', !showFollowup);
@@ -445,6 +492,27 @@
         }
       }
       return output;
+    }
+
+    function getSourceInfo() {
+      const params = new URLSearchParams(window.location.search);
+      const explicitSource = params.get('source') || params.get('src') || params.get('utm_source');
+      const referrer = document.referrer || '';
+      let referrerHost = '';
+
+      try {
+        referrerHost = referrer ? new URL(referrer).hostname.replace(/^www\./, '') : '';
+      } catch (error) {
+        referrerHost = '';
+      }
+
+      let source = explicitSource || '';
+      if (!source && referrerHost.includes('surveycircle')) source = 'surveycircle';
+      if (!source && referrerHost) source = `referrer:${referrerHost}`;
+      if (!source) source = 'direct';
+
+      const detail = params.get('utm_campaign') || params.get('campaign') || referrerHost || '';
+      return { source, detail };
     }
 
     async function submitPayload(payload) {
